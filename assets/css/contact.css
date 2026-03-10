@@ -1,0 +1,161 @@
+/* HERO BACKGROUND */
+.hero {
+  height: 110vh;
+  background: url("/assets/img/contact/backgroundcontactus.png") center/cover no-repeat;
+  position: relative;
+}
+
+.contactmiddle {
+  width: 100%;
+  height: 45rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  background-image: url(/assets/img/contact/backgroudfirst.png);
+}
+
+.contactmiddle2 {
+  width: 100%;
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  background-image: url(/assets/img/contact/backgroudfirst.png);
+}
+
+.mt-8 {
+  margin-top: 6rem !important;
+}
+
+.contactmiddle2 p {
+  font-size: 22px;
+  text-align: justify;
+}
+
+/* Overlay Dark */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.menuleft {
+  width: 6%;
+}
+
+/* Navbar Style */
+.custom-navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding-top: 29px;
+}
+
+/* Nav Links */
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* .nav-link:hover {
+  color: #d4af37 !important;
+} */
+
+/* Logo */
+.logo {
+  color: #d4af37 !important;
+  font-weight: bold;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hamburger White */
+.custom-toggler {
+  filter: invert(1);
+}
+
+/* Hero Text */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h1 {
+  font-size: 75px;
+  font-family: serif;
+}
+
+.hero-content p {
+  font-size: 35px;
+}
+
+.imgmenu {
+  /* position: absolute; */
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.contactdetail {
+  position: relative;
+  z-index: 5;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 748px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  background-image: url(/assets/img/contact/backgroundcontact.png);
+}
+
+.contactdetail h1 {
+  font-size: 55px;
+  padding-top: 10%;
+  text-align: center;
+  padding-bottom: 7%;
+}
+
+.contactdetail p {
+  margin-bottom: 25px;
+  font-size: 23px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* === start footer === */
+.footer {
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+}
+
+.imglogo {
+  padding-top: 19%;
+  width: 200px;
+  height: 150px;
+}
+
+.footer h4 {
+  padding-top: 15%;
+  color: #f2f2f2;
+}
+
+.waimg {
+  margin-top: 2%;
+  margin-right: 2%;
+  width: 30px;
+  height: 30px;
+}
+
+/* === end footer === */

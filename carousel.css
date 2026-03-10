@@ -1,0 +1,254 @@
+/* GLOBAL STYLES
+ * Padding below the footer and lighter body text
+* -------------------------------------------------- */
+
+body {
+  /* padding-bottom: 40px; */
+  /* color: #5a5a5a; */
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+.nav li a {
+  color: rgb(250, 250, 250);
+  font-size: 1.5rem;
+  background-color: transparent;
+  /* transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+.nav li a:hover {
+  /* transform: scale(1.05) rotate(0deg) translate(0px, -10px) skewX(0deg); */
+  /* box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3); */
+  /* opacity: 1; */
+  /* filter: brightness(1.1); */
+  /* color: #86a5ce; */
+  /* border-bottom-color: #667eea; */
+  background-color: transparent;
+}
+
+.nav li a:focus {
+  background-color: transparent;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 59rem;
+  /* margin-bottom: 60px; */
+}
+
+.carousel-caption {
+  z-index: 10; /* Since positioning the image, we need to help out the caption */
+  padding-bottom: 14%;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 59rem;
+
+  /* background-color: #777; */
+}
+
+.carousel-inner > .item > img {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 60rem;
+}
+
+.carousellogo {
+  width: 12rem;
+}
+.carousellogo2 {
+  width: 45rem;
+}
+
+.carouselh4 {
+  color: #feda88;
+}
+
+.menuleft {
+  width: 5%;
+}
+
+.dropdown-menu {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+  color: #000 !important;
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.wsf {
+  padding-top: 8%;
+  font-family: "Cormorant Garamond", serif !important;
+}
+
+.wsf img {
+  width: 346px;
+  height: 466px;
+}
+
+.wsf h1 {
+  padding-bottom: 6%;
+  font-size: 50px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36);
+}
+
+.middlecontentwdj {
+  padding-top: 16.2%;
+  padding-bottom: 13.4%;
+}
+
+.middlecontentwdj h2 {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.build {
+  width: 100%;
+  height: 425px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(/distcarousel/image/backgroundbottomcontent.png);
+}
+
+.imgbuild {
+  padding-top: 10%;
+  padding-bottom: 5.5%;
+  width: 55%;
+  height: 10%;
+}
+
+.imgenquire {
+  width: 25%;
+  cursor: pointer;
+}
+
+/* === start footer === */
+.footer {
+  width: 100%;
+  height: 24rem;
+  background-color: #000;
+}
+
+.imglogo {
+  padding-top: 21%;
+  width: 200px;
+  height: 170px;
+}
+
+.footer h3 {
+  padding-top: 14%;
+  color: #f2f2f2;
+}
+
+.waimg {
+  margin-top: 2%;
+  margin-right: 2%;
+  width: 30px;
+  height: 30px;
+}
+
+/* === end footer === */
+
+.flip-box {
+  width: 346px;
+  height: 466px;
+}
+
+.flip-box-inner {
+  position: relative;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  /* Bump up size of carousel content */
+}
+
+@media (min-width: 992px) {
+}

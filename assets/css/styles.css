@@ -1,0 +1,1066 @@
+/*===== GOGGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/static/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond semibold";
+  src: url("/assets/fonts/static/CormorantGaramond-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*===== VARIABLES SCSS =====*/
+/*===== VARIABLES CSS =====*/
+/*=== Colores ===*/
+:root {
+  --first-color: #0396a6;
+  --dark-color: #000;
+  --white-color: #f2f2f2;
+}
+
+/*=== Fuente y tipografia ===*/
+:root {
+  --body-font: "Open Sans", sans-serif;
+  --biggest-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=== z index ===*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.l-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-modal);
+}
+
+/*===== NAVBAR =====*/
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+
+.imgmenu {
+  /* position: absolute; */
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.dropdown-menu .dropdown-item {
+  text-shadow: none !important;
+}
+
+.menuleft {
+  width: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    left: 0%;
+    top: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 40%;
+    padding: 2rem;
+    text-align: center;
+    z-index: var(--z-fixed);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+.nav__logo {
+  color: var(--white-color);
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+  margin-top: 10px;
+}
+
+.nav__link {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/*=== Show menu ===*/
+.show {
+  top: 3rem;
+}
+
+/*===== HOME =====*/
+.home {
+  height: 125vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.home__parallax {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home__parallax-img1 {
+  background-image: url("/assets/img/home/bghome.png");
+
+  z-index: var(--z-normal);
+}
+
+/* .home__parallax-img2 {
+  background-image: url("/assets/img/imgm2.png");
+  z-index: var(--z-tooltip);
+} */
+
+/* .home__parallax-img3 {
+  background-image: url("/assets/img/imgm3.png");
+  z-index: var(--z-fixed);
+} */
+
+/* .home__parallax-img4 {
+  background-image: url("/assets/img/imgm4.png");
+  z-index: var(--z-fixed);
+} */
+
+.home__title,
+.home__scrolldown,
+.home__subtitle {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.home__title {
+  top: 32%;
+  /* font-size: var(--biggest-font-size); */
+  font-size: 80px;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.home__subtitle {
+  top: 24%;
+  /* font-size: var(--h2-font-size); */
+  font-size: 30px;
+  font-weight: bold;
+  z-index: var(--z-tooltip);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.home__scrolldown {
+  top: 66%;
+  z-index: var(--z-normal);
+}
+
+.home__scroll {
+  position: absolute;
+  bottom: 9.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: var(--z-modal);
+}
+
+.home__scrolldown .bx-chevron-down {
+  color: var(--white-color);
+  font-size: 4em;
+
+  /* font-size: 30%; */
+}
+
+/* .home__scroll .bx-chevron-down {
+  color: var(--white-color);
+} */
+
+/*===== SECTION =====*/
+.l-section {
+  background-color: var(--dark-color);
+}
+
+.blur {
+  width: 120%;
+  margin-left: -10%;
+  height: 130px;
+  background-color: #030000;
+  position: absolute;
+  bottom: -70px;
+  filter: blur(29px);
+  z-index: 999;
+}
+
+.blurbottom {
+  width: 115%;
+  margin-left: -10%;
+  height: 210px;
+  background-color: #030000;
+  position: absolute;
+  bottom: -748px;
+  filter: blur(29px);
+  z-index: 999;
+}
+
+.section {
+  height: 70vh;
+  max-width: 950px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem 0;
+  color: var(--white-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section__data {
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  /* font-size: var(--h2-font-size); */
+  /* color: var(--first-color); */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 70px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.section__img {
+  width: 285px;
+  border-radius: 0.5rem;
+}
+
+/* ==== section WWO =====*/
+#wwosection {
+  font-family: "Cormorant Garamond", serif;
+  width: 100%;
+  height: 190rem;
+  padding-top: 12%;
+  padding-bottom: 5%;
+}
+
+#wwosection h1 {
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36);
+}
+
+.pwwosection {
+  padding-top: 5%;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36);
+}
+
+.wwosection2 {
+  padding-top: 5%;
+}
+
+.wwosection3 {
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+.wwosection5 img {
+  padding-bottom: 8%;
+  width: 35%;
+  height: auto;
+}
+
+.wwosection6 {
+  width: 100%;
+  height: 49rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  background-image: url(/assets/img/home/Luxuryvillabg.svg);
+}
+
+.imgsection6 {
+  padding-top: 10%;
+  width: 25%;
+}
+
+.wwosection6 h1 {
+  color: #f2f2f2;
+  text-align: start;
+  padding-top: 9%;
+  padding-left: 5%;
+}
+
+.wwosection6 p {
+  color: #f2f2f2;
+  text-align: start;
+  padding-left: 5%;
+}
+
+.wwosection7 {
+  width: 100%;
+  height: 49rem;
+  margin-top: 9%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  background-image: url(/assets/img/home/RealEstatebg.svg);
+}
+
+.wwosection7 h1 {
+  color: #f2f2f2;
+  text-align: end;
+  padding-top: 8%;
+  padding-right: 4%;
+}
+
+.wwosection7 p {
+  color: #f2f2f2;
+  text-align: end;
+  padding-right: 4%;
+}
+
+.maboutus {
+  padding-top: 6%;
+  padding-bottom: 5%;
+}
+
+.maboutus img {
+  width: 21.5rem;
+  height: 4rem;
+}
+
+.aboutusbutton {
+  font-family: "Cormorant Garamond", serif !important;
+  background-color: #000000;
+  border-radius: 28px;
+  /* border: 1px solid #18ab29; */
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1.875rem;
+  padding: 16px 60px;
+  text-decoration: none;
+}
+
+/* === end section wwo === */
+
+/* ====== openprojectsection ======== */
+.openproject {
+  font-family: "Cormorant Garamond", serif !important;
+  width: 100%;
+  height: 100rem;
+  margin-top: 10%;
+
+  background-size: cover;
+  background-image: url(/assets/img/home/Backgroundvilla.png);
+}
+
+.openprojectb {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.openprojectrow {
+  padding-top: 4%;
+}
+
+.ourport {
+  padding-top: 12%;
+}
+.ourport p {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 27px;
+  font-weight: bold;
+}
+/* ====end openprojectsection====== */
+
+/* ==== start timless ==== */
+.timeless {
+  font-family: "Cormorant Garamond", serif !important;
+  width: 100%;
+  height: 15rem;
+
+  background-size: cover;
+  background-image: url(/assets/img/home/bgbawah.png);
+}
+
+.timeless p {
+  font-size: 40px;
+  /* font-weight: bold; */
+  color: #f2f2f2;
+  font-style: italic;
+  padding-top: 9%;
+}
+
+/* === end timless === */
+
+/* === start footer === */
+.footer {
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+}
+
+.imglogo {
+  padding-top: 19%;
+  width: 200px;
+  height: 150px;
+}
+
+.footer h4 {
+  padding-top: 15%;
+  color: #f2f2f2;
+}
+
+.waimg {
+  margin-top: 2%;
+  margin-right: 2%;
+  width: 30px;
+  height: 30px;
+}
+
+/* === end footer === */
+
+/* ========================================== start land ================================  */
+
+.home__parallax-imgland {
+  background-image: url("/assets/img/land/bgcarosel.png");
+  z-index: var(--z-normal);
+}
+
+.home__titleland,
+.home__subtitleland {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.home__titleland {
+  font-family: "Cormorant Garamond semibold", serif !important;
+
+  top: 32%;
+  font-size: 4.5rem;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.home__subtitleland {
+  font-family: "Cormorant Garamond", serif !important;
+  top: 43%;
+  font-size: 2.6rem;
+
+  z-index: var(--z-tooltip);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+}
+
+.middlecontentland {
+  height: 209.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/land/bgmiddlecontent.png);
+  padding-top: 10%;
+}
+
+.mland1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.mlandimg1 {
+  width: 30.188rem;
+  height: 43.188rem;
+}
+
+.mlandimg2 {
+  width: 90rem;
+  height: 19rem;
+}
+
+.mland2 {
+  padding-top: 32%;
+  padding-left: 21%;
+  position: absolute;
+  z-index: 3;
+}
+
+.cland1 {
+  margin-top: 65%;
+}
+
+.imglandimg3 {
+  width: 37.063rem;
+  height: 34.375rem;
+  text-align: center;
+}
+
+.cland2 {
+  margin-top: 9%;
+}
+
+.imglandimg4 {
+  width: 37.063rem;
+  height: 39.375rem;
+}
+
+.cland3 {
+  padding-top: 10%;
+  position: relative;
+}
+
+.mlandimg6 {
+  width: 100%;
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/land/landacq.png);
+}
+
+.imgacq {
+  width: 640px;
+  height: 60rem;
+}
+
+.imgbaliland {
+  width: 640px;
+  height: 60rem;
+}
+
+.mlandimg7 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/land/landbali.png);
+}
+
+.garis-tepi {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 4px solid #ffffff; /* Garis di bawah */
+  width: 14%;
+}
+
+.garis-tepi2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 4px solid #ffffff; /* Garis di bawah */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  width: 14%;
+}
+
+.H11 {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  font-family: "Cormorant Garamond semibold", serif !important;
+}
+
+.H111 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  font-family: "Cormorant Garamond semibold", serif !important;
+}
+
+.H12 {
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  font-family: "Cormorant Garamond semibold", serif !important;
+}
+
+.H122 {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  font-family: "Cormorant Garamond semibold", serif !important;
+}
+
+.clandp1 {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.clandp11 {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.flip-box {
+  width: 100%;
+  height: 60rem;
+}
+
+.flip-box-inner {
+  position: relative;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.explore {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  padding-top: 5%;
+  width: 100%;
+  height: 22rem;
+  background-color: #384416;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+.exp1 {
+  padding-top: 4%;
+  width: 16rem;
+  cursor: pointer;
+}
+
+/* ========================================== end land =================================== */
+
+/* ========================================== start construction ======================== */
+.home__parallax-imgconstruction {
+  background-image: url("/assets/img/construction/backgroundatasconstruction.png");
+  z-index: var(--z-normal);
+}
+
+.home__titleconstruction,
+.home__subtitleconstruction {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.home__titleconstruction {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  top: 32%;
+  font-size: 4rem;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.home__subtitleconstruction {
+  font-family: "Cormorant Garamond", serif !important;
+  top: 43%;
+  font-size: 2.5rem;
+
+  z-index: var(--z-tooltip);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+}
+
+.backgroundallconstruction {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  height: 209.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundall.png);
+  padding-top: 15%;
+}
+
+.backgroundallconstruction h1 {
+  font-family: "Cormorant Garamond semibold", serif !important;
+}
+
+.topleft {
+  width: 52%;
+  height: 891px;
+  z-index: 1;
+}
+
+.topright {
+  position: absolute;
+  height: 50rem;
+  left: 47%;
+  z-index: 2;
+}
+
+.tittletop {
+  position: absolute;
+  z-index: 4;
+  padding-top: 10%;
+  text-align: justify;
+  width: 430px;
+}
+
+.tittletop p {
+  font-size: 21px;
+}
+
+.devtop {
+  padding-bottom: 6%;
+}
+
+.poinimg {
+  width: 20px;
+}
+
+.devmid {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.qoutesmid {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  margin-top: 14%;
+  height: 27rem;
+  width: 100rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundqoutes.png);
+  color: #f2f2f2;
+}
+
+.qoutesmid h1 {
+  padding-top: 6%;
+  padding-bottom: 2%;
+}
+
+.qoutesmid p {
+  font-size: 1.5rem;
+}
+
+.compr {
+  width: 100rem;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundcompr.png);
+  text-align: center;
+}
+
+.comprtittle {
+  padding-top: 10%;
+  font-size: 3rem;
+}
+
+.comprtittle2 {
+  padding-top: 4%;
+  font-size: 1.3rem;
+}
+
+.frcon {
+  padding-top: 6%;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.getin {
+  padding-top: 4%;
+  width: 15.5rem;
+  cursor: pointer;
+}
+
+/* ========================================== end construction ========================== */
+
+/*=============== TESTIMONIAL CARD ===============*/
+/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container1 {
+  max-width: 1220px;
+  margin-inline: 1.5rem;
+}
+
+/*=============== TESTIMONIAL CARD ===============*/
+.testimonial {
+  font-family: "Cormorant Garamond", serif !important;
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundcompr.png);
+  text-align: center;
+}
+
+.testimonial__swiper {
+  width: 1200px;
+  padding-bottom: 7rem;
+}
+
+.testimonial__title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial__card {
+  /* width: 484px;
+  height: 639px; */
+  width: 430px;
+  height: 480px;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 16px hsla(265, 75%, 4%, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide2 {
+  width: 430px;
+  height: 500px;
+}
+
+/* Swiper class */
+.testimonial .swiper-pagination-bullets {
+  bottom: 4rem;
+}
+
+.testimonial .swiper-button-prev {
+  left: calc(45% - 3rem);
+}
+
+.testimonial .swiper-button-next {
+  right: calc(45% - 3rem);
+}
+
+.testimonial .swiper-button-prev::after,
+.testimonial .swiper-button-next::after {
+  content: "";
+}
+
+.testimonial :is(.swiper-button-prev, .swiper-button-next) {
+  top: initial;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 760px) {
+  .nav {
+    height: 4rem;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.78);
+    padding-top: 5%;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .home__title {
+    top: 25%;
+  }
+  .home__subtitle {
+    top: 39%;
+  }
+  .section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__text {
+    /* padding-right: 4rem; */
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .section__img {
+    width: 470px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

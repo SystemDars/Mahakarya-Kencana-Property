@@ -1,0 +1,905 @@
+/*===== GOGGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+/*===== VARIABLES SCSS =====*/
+/*===== VARIABLES CSS =====*/
+/*=== Colores ===*/
+:root {
+  --first-color: #0396a6;
+  --dark-color: #000;
+  --white-color: #f2f2f2;
+}
+
+/*=== Fuente y tipografia ===*/
+:root {
+  --body-font: "Open Sans", sans-serif;
+  --biggest-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=== z index ===*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.l-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-modal);
+}
+
+/*===== NAVBAR =====*/
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.imgmenu {
+  /* position: absolute; */
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.menuleft {
+  width: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    left: 0%;
+    top: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 40%;
+    padding: 2rem;
+    text-align: center;
+    z-index: var(--z-fixed);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+.nav__logo {
+  color: var(--white-color);
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/*=== Show menu ===*/
+.show {
+  top: 3rem;
+}
+
+/*===== HOME =====*/
+.home {
+  height: 195vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.home__parallax {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home__parallax-img1 {
+  background-image: url("/assets/img/marenasol/bgmarenasol.png");
+  z-index: var(--z-normal);
+}
+
+.home__title,
+.home__title2,
+.home__scrolldown,
+.home__subtitle {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.home__title {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  top: 20%;
+  font-size: 80px;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.home__title2 {
+  font-family: "Cormorant Garamond semibold", serif !important;
+  top: 26%;
+  font-size: 60px;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.home__subtitle {
+  font-family: "Cormorant Garamond italic", serif !important;
+  top: 24%;
+  font-size: 60px;
+  z-index: var(--z-tooltip);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+}
+
+.home__scrolldown {
+  top: 45%;
+  z-index: var(--z-normal);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+}
+
+.home__scroll {
+  position: absolute;
+  bottom: 9.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: var(--z-modal);
+}
+
+.home__scrolldown .bx-chevron-down {
+  color: var(--white-color);
+  font-size: 4em;
+
+  /* font-size: 30%; */
+}
+
+/* .home__scroll .bx-chevron-down {
+  color: var(--white-color);
+} */
+
+/*===== SECTION =====*/
+.l-section {
+  /* background-color: #80afd6; */
+  /* position: relative; */
+  width: 100%;
+  height: 77rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/marenasol/marenasolrtenagh.png);
+}
+
+.dropdown-menu .dropdown-item {
+  text-shadow: none !important;
+}
+
+.blur3 {
+  width: 120%;
+  margin-left: -10%;
+  height: 60px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 191%;
+  /* bottom: -250px; */
+  /* filter: blur(29px); */
+  filter: blur(17px);
+  z-index: 999;
+}
+
+.tittlemarenasol {
+  margin-top: 60%;
+  width: 699px;
+  height: 400px;
+}
+
+.tittlefontmarenasol {
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  padding-top: 18%;
+}
+
+.tittlelatropical2 {
+  position: absolute;
+  width: 100%;
+  height: 35rem;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tittlelatropical3 {
+  position: absolute;
+  width: 100%;
+  /* height: 35rem; */
+  top: 382%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+.sunimage {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 76px;
+  z-index: 6;
+}
+
+.blur {
+  width: 120%;
+  margin-left: -10%;
+  height: 450px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -250px;
+  /* filter: blur(29px); */
+  filter: blur(90px);
+  z-index: 999;
+}
+
+.blurbottom {
+  width: 120%;
+  margin-left: -10%;
+  height: 410px;
+  background-color: #d68f6c;
+  position: absolute;
+  top: 352%;
+  filter: blur(84px);
+  z-index: 999;
+}
+
+.section {
+  height: 70vh;
+  max-width: 950px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem 0;
+  color: var(--white-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section__data {
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  /* font-size: var(--h2-font-size); */
+  /* color: var(--first-color); */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 45px;
+}
+
+.section__img {
+  width: 285px;
+  border-radius: 0.5rem;
+}
+
+/* ========= list room ======== */
+
+.listroom {
+  width: 100%;
+  height: 40rem;
+  background-color: #f6efe3;
+}
+
+.listmarenasol {
+  margin-top: 8%;
+}
+
+.detailroom {
+  font-family: "Cormorant Garamond", serif !important;
+  position: relative;
+  width: 100%;
+  height: 77rem;
+  padding-top: 10%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/marenasol/tittlemarenasol.png);
+}
+
+.detailroom2 {
+  font-family: "Cormorant Garamond", serif !important;
+  position: relative;
+  width: 100%;
+  height: 70rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/marenasol/tittlemarenasol2.png);
+}
+
+.detailroom3 {
+  font-family: "Cormorant Garamond", serif !important;
+  position: relative;
+  width: 100%;
+  height: 55rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/marenasol/tittlemarenasol3.png);
+}
+
+.listdetasil1 {
+  width: 100%;
+  height: auto;
+}
+
+.listdetasil2 {
+  width: 50rem;
+  height: auto;
+}
+
+.text-detail {
+  position: absolute;
+  top: 12.5%; /* Posisi dari atas */
+  left: 9.5%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail2 {
+  position: absolute;
+  top: 15.4%; /* Posisi dari atas */
+  left: 9.5%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail3 {
+  padding-top: 29%;
+  text-align: center;
+  font-size: 19px;
+  padding-right: 2%;
+}
+
+.text-detail4 {
+  position: absolute;
+  top: 62%; /* Posisi dari atas */
+  left: 69%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail5 {
+  position: absolute;
+  top: 64.5%; /* Posisi dari atas */
+  left: 76%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail6 {
+  position: absolute;
+  top: 2%; /* Posisi dari atas */
+  left: 11%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail62 {
+  position: absolute;
+  top: 4%; /* Posisi dari atas */
+  left: 11%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail7 {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 19px;
+}
+
+.text-detail8 {
+  position: absolute;
+  top: 88%; /* Posisi dari atas */
+  left: 66%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.text-detail9 {
+  position: absolute;
+  top: 5%; /* Posisi dari atas */
+  left: 10%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  /* transform: translate(-50%, -50%); Rata tengah sempurna */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.tittlebottom {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* ========= end list room ==== */
+
+/* ====== openprojectsection ======== */
+.openproject {
+  width: 100%;
+  height: 100rem;
+  margin-top: 10%;
+
+  background-size: cover;
+  background-image: url(/assets/img/home/Backgroundvilla.png);
+}
+
+.openprojectb {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.openprojectrow {
+  padding-top: 4%;
+}
+
+.ourport {
+  padding-top: 12%;
+}
+.ourport p {
+  font-size: 23px;
+  font-weight: bold;
+}
+/* ====end openprojectsection====== */
+
+/* ==== start timless ==== */
+.timeless {
+  width: 100%;
+  height: 15rem;
+
+  background-size: cover;
+  background-image: url(/assets/img/home/bgbawah.png);
+}
+
+.timeless p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f2f2f2;
+  font-style: italic;
+  padding-top: 9%;
+}
+
+/* === end timless === */
+
+/* === start footer === */
+.footer {
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+}
+
+.imglogo {
+  padding-top: 19%;
+  width: 200px;
+  height: 150px;
+}
+
+.footer h4 {
+  padding-top: 15%;
+  color: #f2f2f2;
+}
+
+.waimg {
+  margin-top: 2%;
+  margin-right: 2%;
+  width: 30px;
+  height: 30px;
+}
+
+/* === end footer === */
+
+/* ========================================== start land ================================  */
+
+.garis-tepi {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 4px solid #ffffff; /* Garis di bawah */
+  width: 14%;
+}
+
+.garis-tepi2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 4px solid #ffffff; /* Garis di bawah */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  width: 14%;
+}
+
+.H11 {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.H111 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.H12 {
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.H122 {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.clandp1 {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.clandp11 {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+}
+
+.flip-box {
+  width: 100%;
+  height: 60rem;
+}
+
+.flip-box-inner {
+  position: relative;
+
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.explore {
+  padding-top: 5%;
+  width: 100%;
+  height: 22rem;
+  background-color: #384416;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+.exp1 {
+  padding-top: 4%;
+  width: 16rem;
+  cursor: pointer;
+}
+
+/* ========================================== end land =================================== */
+
+/* ========================================== start construction ======================== */
+
+.topleft {
+  width: 52%;
+  height: 891px;
+  z-index: 1;
+}
+
+.topright {
+  position: absolute;
+  height: 50rem;
+  left: 47%;
+  z-index: 2;
+}
+
+.tittletop {
+  position: absolute;
+  z-index: 4;
+  padding-top: 10%;
+  text-align: justify;
+  width: 430px;
+}
+
+.tittletop p {
+  font-size: 21px;
+}
+
+.devtop {
+  padding-bottom: 6%;
+}
+
+.poinimg {
+  width: 20px;
+}
+
+.devmid {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.qoutesmid {
+  margin-top: 14%;
+  height: 27rem;
+  width: 100rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundqoutes.png);
+  color: #f2f2f2;
+}
+
+.qoutesmid h1 {
+  padding-top: 6%;
+  padding-bottom: 2%;
+}
+
+.qoutesmid p {
+  font-size: 1.5rem;
+}
+
+.compr {
+  width: 100rem;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/construction/backgroundcompr.png);
+  text-align: center;
+}
+
+.comprtittle {
+  padding-top: 10%;
+  font-size: 3rem;
+}
+
+.comprtittle2 {
+  padding-top: 4%;
+  font-size: 1.3rem;
+}
+
+.frcon {
+  padding-top: 6%;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.getin {
+  padding-top: 4%;
+  width: 15.5rem;
+  cursor: pointer;
+}
+
+/* ========================================== end construction ========================== */
+
+/*=============== TESTIMONIAL CARD ===============*/
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 760px) {
+  .nav {
+    height: 4rem;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 1.2rem;
+    margin-bottom: 0;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.58);
+    padding-top: 5%;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .home__title {
+    top: 18%;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.58);
+  }
+  .home__subtitle {
+    top: 35%;
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+  .section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__text {
+    /* padding-right: 4rem; */
+    text-align: center;
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .section__img {
+    width: 470px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
