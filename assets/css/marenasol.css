@@ -313,7 +313,7 @@ img {
 
 .sunimage {
   position: absolute;
-  top: 105%;
+  top: 300%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 130px;
@@ -322,7 +322,7 @@ img {
 }
 
 .blur {
-  width: 120%;
+  width: 180%;
   margin-left: -10%;
   height: 450px;
   background-color: #ffffff;

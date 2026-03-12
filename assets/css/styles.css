@@ -48,6 +48,13 @@
 }
 
 /*===== BASE =====*/
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Mematikan scroll horizontal secara paksa */
+}
+
 *,
 ::before,
 ::after {
@@ -308,7 +315,7 @@ img {
 
 .blurbottom {
   /* width: 115%; */
-  width: 1800px;
+  width: 120%;
   margin-left: -10%;
   height: 210px;
   background-color: #030000;
@@ -316,6 +323,16 @@ img {
   bottom: -748px;
   filter: blur(29px);
   z-index: 999;
+}
+
+.img-link {
+  cursor: pointer;
+  transition: transform 0.3s; /* Tambahan: agar ada efek halus saat di-hover */
+}
+
+.img-link:hover {
+  opacity: 0.8; /* Memberi efek sedikit transparan saat disentuh mouse */
+  transform: scale(1.02); /* Memberi efek sedikit membesar */
 }
 
 .section {
