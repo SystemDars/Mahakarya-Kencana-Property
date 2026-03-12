@@ -30,6 +30,10 @@
   --normal-font-size: 0.938rem;
 }
 
+* {
+  outline: 1px solid red !important;
+}
+
 @media screen and (min-width: 768px) {
   :root {
     --biggest-font-size: 5rem;
@@ -301,13 +305,14 @@ img {
   height: 130px;
   background-color: #030000;
   position: absolute;
-  bottom: -70px;
+  bottom: -68px;
   filter: blur(29px);
   z-index: 999;
 }
 
 .blurbottom {
-  width: 115%;
+  /* width: 115%; */
+  width: 1800px;
   margin-left: -10%;
   height: 210px;
   background-color: #030000;
