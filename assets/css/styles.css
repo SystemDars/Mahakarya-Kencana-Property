@@ -30,10 +30,6 @@
   --normal-font-size: 0.938rem;
 }
 
-* {
-  outline: 1px solid red !important;
-}
-
 @media screen and (min-width: 768px) {
   :root {
     --biggest-font-size: 5rem;
