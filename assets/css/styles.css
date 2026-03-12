@@ -196,9 +196,20 @@ img {
 }
 
 .home__parallax-img1 {
-  background-image: url("/assets/img/home/bghome.png");
+  /* background-image: url("/assets/img/home/Videohomepage.gif"); */
 
   z-index: var(--z-normal);
+}
+
+#bg-video {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* .home__parallax-img2 {
@@ -250,7 +261,7 @@ img {
 }
 
 .home__scrolldown {
-  top: 66%;
+  top: 69%;
   z-index: var(--z-normal);
 }
 
