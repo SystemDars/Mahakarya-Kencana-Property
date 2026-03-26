@@ -288,7 +288,7 @@ img {
 .tittlefontmarenasol {
   text-align: center;
   font-size: 18px;
-  position: absolute;
+  /* position: absolute; */
   padding-top: 18%;
 }
 
@@ -313,12 +313,13 @@ img {
 
 .sunimage {
   position: absolute;
-  top: 300%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   width: 130px;
   height: 76px;
-  z-index: 6;
+  /* z-index: 6; */
 }
 
 .blur {
@@ -334,13 +335,18 @@ img {
 }
 
 .blurbottom {
-  width: 120%;
+  width: 180%;
   margin-left: -10%;
-  height: 410px;
+  height: 450px;
+  /* width: 120%; */
+  /* margin-left: -10%; */
+  /* height: 410px; */
   background-color: #d68f6c;
   position: absolute;
-  top: 352%;
-  filter: blur(84px);
+  /* top: 352%; */
+  bottom: -2010px;
+  filter: blur(77px);
+  /* filter: blur(84px); */
   z-index: 999;
 }
 
@@ -367,6 +373,8 @@ img {
 }
 
 .section__data {
+  position: relative;
+  margin-top: 150px;
   margin-bottom: 3rem;
 }
 
