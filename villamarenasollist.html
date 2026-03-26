@@ -83,30 +83,12 @@
               <!--  -->
               <div class="slider">
                 <div class="slides">
-                  <img src="assets/img/listmarenasol/listob1.png" />
-                  <img src="assets/img/listmarenasol/listob2.png" />
-                  <img src="assets/img/listmarenasol/listob3.jpg" />
-                  <img src="assets/img/listmarenasol/listob4.jpg" />
-                  <img src="assets/img/listmarenasol/listob5.jpg" />
-                  <img src="assets/img/listmarenasol/listob6.jpg" />
-                  <img src="assets/img/listmarenasol/listob7.jpg" />
-                  <img src="assets/img/listmarenasol/listob9.jpg" />
-                  <img src="assets/img/listmarenasol/listob10.jpg" />
-                  <img src="assets/img/listmarenasol/listob11.jpg" />
-                  <img src="assets/img/listmarenasol/listob12.jpg" />
-                  <img src="assets/img/listmarenasol/listob13.jpg" />
-                  <img src="assets/img/listmarenasol/listob14.jpg" />
-                  <img src="assets/img/listmarenasol/listob15.jpg" />
-                  <img src="assets/img/listmarenasol/listob16.jpg" />
-                  <img src="assets/img/listmarenasol/listob17.jpg" />
-                  <img src="assets/img/listmarenasol/listob18.jpg" />
-                  <img src="assets/img/listmarenasol/listob19.jpg" />
-                  <img src="assets/img/listmarenasol/listob20.jpg" />
-                  <img src="assets/img/listmarenasol/listob21.jpg" />
-                  <img src="assets/img/listmarenasol/listob22.jpg" />
-                  <img src="assets/img/listmarenasol/listob23.jpg" />
-                  <img src="assets/img/listmarenasol/listob24.jpg" />
-                  <img src="assets/img/listmarenasol/listob25.jpg" />
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob1.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob2.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob3.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob4.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob5.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/Bedroom/listob6.jpg" /></div>
                 </div>
 
                 <!-- <button class="prev">&#10094;</button> -->
@@ -119,7 +101,23 @@
             <div class="col-4"></div>
             <div class="col-8">
               <h4 class="detailonedbedroom1">Living room</h4>
-              <img src="assets/img/listmarenasol/listob11.jpg" alt="" class="lvimage1" />
+              <!--  -->
+              <div class="slider">
+                <div class="slides">
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv1.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv2.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv3.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv4.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv5.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv6.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv7.jpg" /></div>
+                  <div class="slide"><img src="assets/img/listmarenasol/LivingRoom/lv8.jpg" /></div>
+                </div>
+
+                <!-- <button class="prev">&#10094;</button> -->
+                <button class="next"><img src="assets/img/listmarenasol/next.png" alt="" /></button>
+              </div>
+              <!-- <img src="assets/img/listmarenasol/listob11.jpg" alt="" class="lvimage1" /> -->
             </div>
           </div>
         </div>
@@ -250,7 +248,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/bootstrap537/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
       const slides = document.querySelector(".slides");
       const images = document.querySelectorAll(".slides img");
       const prevBtn = document.querySelector(".prev");
@@ -271,6 +269,29 @@
       prevBtn.addEventListener("click", () => {
         index = (index - 1 + totalSlides) % totalSlides;
         showSlide(index);
+      });
+    </script> -->
+
+    <script>
+      document.querySelectorAll(".slider").forEach((slider) => {
+        const slides = slider.querySelector(".slides");
+        const slideItems = slider.querySelectorAll(".slide");
+        const next = slider.querySelector(".next");
+
+        let index = 0;
+
+        function updateSlide() {
+          const slideWidth = slider.offsetWidth;
+          slides.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        next.addEventListener("click", () => {
+          index++;
+          if (index >= slideItems.length) index = 0;
+          updateSlide();
+        });
+
+        window.addEventListener("resize", updateSlide);
       });
     </script>
   </body>

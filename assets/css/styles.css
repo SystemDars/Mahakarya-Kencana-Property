@@ -317,10 +317,10 @@ img {
   /* width: 115%; */
   width: 120%;
   margin-left: -10%;
-  height: 210px;
+  height: 230px;
   background-color: #030000;
   position: absolute;
-  bottom: -748px;
+  bottom: -728px;
   filter: blur(29px);
   z-index: 999;
 }

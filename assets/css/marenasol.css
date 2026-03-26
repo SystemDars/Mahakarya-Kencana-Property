@@ -35,6 +35,12 @@
 }
 
 /*===== BASE =====*/
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Mematikan scroll horizontal secara paksa */
+}
+
 *,
 ::before,
 ::after {
@@ -345,7 +351,7 @@ img {
   position: absolute;
   /* top: 352%; */
   bottom: -2010px;
-  filter: blur(77px);
+  filter: blur(80px);
   /* filter: blur(84px); */
   z-index: 999;
 }
