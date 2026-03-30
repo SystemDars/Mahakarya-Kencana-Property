@@ -316,12 +316,15 @@ img {
 .blurbottom {
   /* width: 115%; */
   width: 120%;
-  margin-left: -10%;
-  height: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 210px;
   background-color: #030000;
   position: absolute;
-  bottom: -728px;
+  /* bottom: -728px; */
+  top: 179%;
   filter: blur(29px);
+  -webkit-filter: blur(29px);
   z-index: 999;
 }
 
