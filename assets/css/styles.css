@@ -607,7 +607,7 @@ img {
 }
 
 .middlecontentland {
-  height: 209.5rem;
+  height: 95%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -621,17 +621,17 @@ img {
 }
 
 .mlandimg1 {
-  width: 30.188rem;
-  height: 43.188rem;
+  width: 100%;
+  height: auto;
 }
 
 .mlandimg2 {
-  width: 90rem;
-  height: 19rem;
+  width: 100%;
+  height: auto;
 }
 
 .mland2 {
-  padding-top: 32%;
+  padding-top: 30%;
   padding-left: 21%;
   position: absolute;
   z-index: 3;
@@ -802,7 +802,7 @@ img {
   font-family: "Cormorant Garamond semibold", serif !important;
   padding-top: 5%;
   width: 100%;
-  height: 22rem;
+  height: 350px;
   background-color: #384416;
   text-align: center;
   color: white;
