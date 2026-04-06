@@ -267,7 +267,9 @@ img {
 
 .marenasolvillalist {
   width: 100%;
-  height: 160rem;
+  /* height: 160rem; */
+  height: auto;
+  padding-bottom: 8%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -275,7 +277,9 @@ img {
 }
 .marenasolvillalist2 {
   width: 100%;
-  height: 172rem;
+  /* height: 172rem; */
+  height: auto;
+  padding-bottom: 8%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -284,16 +288,19 @@ img {
 
 .marenasolvillalist3 {
   width: 100%;
-  height: 140rem;
+  height: auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  padding-bottom: 10%;
   background-image: url(/assets/img/listlatropical/backgroundlistlatropical.jpg);
 }
 
 .latropicallist4 {
   width: 100%;
-  height: 115rem;
+  /* height: 115rem; */
+  height: auto;
+  padding-bottom: 5%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -302,7 +309,9 @@ img {
 
 .latropicallist5 {
   width: 100%;
-  height: 100rem;
+  /* height: 100rem; */
+  height: auto;
+  padding-bottom: 5%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -311,7 +320,9 @@ img {
 
 .latropicallist6 {
   width: 100%;
-  height: 80rem;
+  /* height: 80rem; */
+  height: auto;
+  padding-bottom: 8%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -320,7 +331,9 @@ img {
 
 .latropicallist7 {
   width: 100%;
-  height: 150rem;
+  /* height: 150rem; */
+  height: auto;
+  padding-bottom: 10%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -363,7 +376,7 @@ img {
 }
 
 .tltitle2 {
-  font-size: 28px;
+  font-size: 1.9rem;
 }
 
 .map-wrapper {

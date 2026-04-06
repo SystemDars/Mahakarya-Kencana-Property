@@ -525,8 +525,7 @@ img {
 .timeless {
   font-family: "Cormorant Garamond", serif !important;
   width: 100%;
-  height: 15rem;
-
+  height: auto;
   background-size: cover;
   background-image: url(/assets/img/home/bgbawah.png);
 }
@@ -534,9 +533,12 @@ img {
 .timeless p {
   font-size: 40px;
   /* font-weight: bold; */
+  text-align: center;
   color: #f2f2f2;
   font-style: italic;
   padding-top: 9%;
+  padding-bottom: 8%;
+  padding-left: 2%;
 }
 
 /* === end timless === */
@@ -612,6 +614,7 @@ img {
   background-position: center center;
   background-size: cover;
   background-image: url(/assets/img/land/bgmiddlecontent.png);
+  background-color: #384416;
   padding-top: 10%;
 }
 
@@ -801,8 +804,9 @@ img {
 .explore {
   font-family: "Cormorant Garamond semibold", serif !important;
   padding-top: 5%;
-  width: 100%;
-  height: 350px;
+  padding-bottom: 10%;
+  /* width: 100%; */
+  height: 90%;
   background-color: #384416;
   text-align: center;
   color: white;
@@ -855,7 +859,7 @@ img {
 
 .backgroundallconstruction {
   font-family: "Cormorant Garamond semibold", serif !important;
-  height: 209.5rem;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -948,6 +952,7 @@ img {
 
 .frcon {
   padding-top: 6%;
+  padding-bottom: 10%;
   font-style: italic;
   color: #ffffff;
 }
