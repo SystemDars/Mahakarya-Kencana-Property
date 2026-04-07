@@ -611,12 +611,13 @@ img {
 }
 
 .middlecontentland {
-  height: 95%;
+  width: 100%;
+  height: 80%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url(/assets/img/land/bgmiddlecontent.png);
-  background-color: #384416;
+  background-image: url(/assets/img/land/bgmiddlecontent1.png);
+  /* background-color: #384416; */
   padding-top: 10%;
 }
 
@@ -664,6 +665,7 @@ img {
 .cland3 {
   padding-top: 10%;
   position: relative;
+  /* Gunakan Flexbox untuk centering */
 }
 
 .mlandimg6 {
@@ -721,7 +723,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
   font-family: "Cormorant Garamond semibold", serif !important;
 }
@@ -732,7 +734,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
   font-family: "Cormorant Garamond semibold", serif !important;
 }
@@ -743,7 +745,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
   font-family: "Cormorant Garamond semibold", serif !important;
 }
@@ -754,7 +756,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
   font-family: "Cormorant Garamond semibold", serif !important;
 }
@@ -765,7 +767,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
 }
 
@@ -775,7 +777,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
 }
 
@@ -808,12 +810,20 @@ img {
 }
 
 .explore {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(/assets/img/land/bgmiddlecontent3.png);
+
   font-family: "Cormorant Garamond semibold", serif !important;
   padding-top: 5%;
   padding-bottom: 10%;
   /* width: 100%; */
-  height: 90%;
-  background-color: #384416;
+  /* height: 90%; */
+  /* background-color: #384416; */
+
   text-align: center;
   color: white;
   font-style: italic;
