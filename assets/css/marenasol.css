@@ -352,7 +352,7 @@ img {
   height: 420px;
   background-color: #d68f6c;
   position: absolute;
-  bottom: -308%;
+  top: 340%;
 
   /* bottom: -330%; */
   filter: blur(67px);
@@ -361,8 +361,8 @@ img {
 }
 
 .section {
-  height: 70vh;
-  max-width: 950px;
+  height: 75vh;
+  max-width: 850px;
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 2rem 0;
