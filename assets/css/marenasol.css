@@ -349,10 +349,10 @@ img {
   /* left: -10%; */
   left: 50%;
   transform: translateX(-50%);
-  height: 420px;
+  height: 450px;
   background-color: #d68f6c;
   position: absolute;
-  top: 349%;
+  top: 330%;
 
   /* bottom: -330%; */
   filter: blur(57px);
