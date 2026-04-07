@@ -341,17 +341,19 @@ img {
 }
 
 .blurbottom {
-  width: 180%;
+  width: 120%;
   /* margin-left: -10%; */
   /* height: 450px; */
   /* width: 120%; */
-  left: -10%;
+  /* left: -10%; */
+  left: 50%;
+  transform: translateX(-50%);
   height: 420px;
   background-color: #d68f6c;
   position: absolute;
-  /* top: 352%; */
+  top: 352%;
 
-  bottom: -330%;
+  /* bottom: -330%; */
   filter: blur(67px);
   /* filter: blur(84px); */
   z-index: 1;
