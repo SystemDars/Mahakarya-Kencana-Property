@@ -352,10 +352,10 @@ img {
   height: 420px;
   background-color: #d68f6c;
   position: absolute;
-  top: 348%;
+  top: 349%;
 
   /* bottom: -330%; */
-  filter: blur(67px);
+  filter: blur(57px);
   /* filter: blur(84px); */
   z-index: 1;
 }
