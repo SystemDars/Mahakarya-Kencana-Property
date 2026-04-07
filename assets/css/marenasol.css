@@ -342,18 +342,19 @@ img {
 
 .blurbottom {
   width: 180%;
-  margin-left: -10%;
-  height: 450px;
-  /* width: 120%; */
   /* margin-left: -10%; */
-  /* height: 410px; */
+  /* height: 450px; */
+  /* width: 120%; */
+  left: -10%;
+  height: 420px;
   background-color: #d68f6c;
   position: absolute;
   /* top: 352%; */
-  bottom: -2010px;
-  filter: blur(80px);
+
+  bottom: -330%;
+  filter: blur(67px);
   /* filter: blur(84px); */
-  z-index: 999;
+  z-index: 1;
 }
 
 .section {
@@ -401,19 +402,22 @@ img {
 
 .listroom {
   width: 100%;
-  height: 40rem;
+  height: auto;
+  padding-bottom: 3%;
   background-color: #f6efe3;
 }
 
 .listmarenasol {
-  margin-top: 8%;
+  margin-top: 15%;
 }
 
 .detailroom {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 77rem;
+  /* height: 77rem; */
+  height: auto;
+  padding-bottom: 5%;
   padding-top: 10%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -425,7 +429,9 @@ img {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 70rem;
+  height: auto;
+  padding-bottom: 5%;
+  /* height: 70rem; */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -436,7 +442,9 @@ img {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 55rem;
+  /* height: 55rem; */
+  height: auto;
+  padding-bottom: 10%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -534,7 +542,7 @@ img {
 
 .text-detail8 {
   position: absolute;
-  top: 88%; /* Posisi dari atas */
+  top: 79%; /* Posisi dari atas */
   left: 66%;
   color: #ffffff;
   font-size: 22px;

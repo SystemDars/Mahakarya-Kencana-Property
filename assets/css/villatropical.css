@@ -309,7 +309,7 @@ img {
   position: absolute;
   width: 100%;
   /* height: 35rem; */
-  top: 382%;
+  /* top: 382%; */
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -392,15 +392,18 @@ img {
 .listroom {
   padding-top: 10%;
   width: 100%;
-  height: 40rem;
+  /* height: 40rem; */
+  padding-bottom: 10%;
 }
 
 .detailroom {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 77rem;
+  /* height: 77rem; */
+  height: auto;
   padding-top: 10%;
+  padding-bottom: 10%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -411,7 +414,8 @@ img {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 70rem;
+  /* padding-bottom: 5%; */
+  height: auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -422,7 +426,10 @@ img {
   font-family: "Cormorant Garamond", serif !important;
   position: relative;
   width: 100%;
-  height: 55rem;
+  /* height: 55rem; */
+  padding-top: 3%;
+  padding-bottom: 15%;
+  height: auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
