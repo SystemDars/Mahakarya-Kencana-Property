@@ -676,13 +676,17 @@ img {
 }
 
 .imgacq {
-  width: 640px;
-  height: 60rem;
+  /* width: 640px; */
+  /* height: 60rem; */
+  width: 100%;
+  height: auto;
 }
 
 .imgbaliland {
-  width: 640px;
-  height: 60rem;
+  /* width: 640px;
+  height: 60rem; */
+  width: 100%;
+  height: auto;
 }
 
 .mlandimg7 {
