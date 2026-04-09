@@ -262,11 +262,11 @@ img {
   /* position: relative; */
   width: 100%;
   /* height: 77rem; */
-  height: 1100px;
+  height: 196vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url(/assets/img/marenasol/marenasolrtenagh.png);
+  background-image: url(/assets/img/marenasol/marenasolrtenagh2.png);
 }
 
 .dropdown-menu .dropdown-item {
@@ -296,7 +296,7 @@ img {
   text-align: center;
   font-size: 18px;
   /* position: absolute; */
-  padding-top: 18%;
+  padding-top: 15%;
 }
 
 .tittlelatropical2 {
@@ -360,6 +360,34 @@ img {
   z-index: 1;
 }
 
+/*  */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-top: 12%;
+}
+
+/* layer buat nyatuin warna */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+
+  /* sesuaikan warna bawah dengan background kamu */
+  background: linear-gradient(to bottom, rgba(214, 192, 170, 0), /* transparan */ rgb(246, 239, 227) /* warna bawah */);
+}
+
+/*  */
+
 .section {
   height: 75vh;
   max-width: 850px;
@@ -407,6 +435,7 @@ img {
   width: 100%;
   height: auto;
   padding-bottom: 3%;
+  padding-top: 17%;
   background-color: #f6efe3;
 }
 
