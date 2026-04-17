@@ -392,12 +392,12 @@ img {
 
 #wwosection h1 {
   font-weight: bold;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36);
+  /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36); */
 }
 
 .pwwosection {
   padding-top: 5%;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36);
+  /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.36); */
 }
 
 .wwosection2 {
@@ -598,7 +598,7 @@ img {
   top: 32%;
   font-size: 4.5rem;
   z-index: var(--z-normal);
-  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  /* text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71); */
 }
 
 .home__subtitleland {
@@ -607,7 +607,7 @@ img {
   font-size: 2.6rem;
 
   z-index: var(--z-tooltip);
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+  /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86); */
 }
 
 .middlecontentland {
@@ -860,7 +860,7 @@ img {
   top: 32%;
   font-size: 4rem;
   z-index: var(--z-normal);
-  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  /* text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71); */
 }
 
 .home__subtitleconstruction {
@@ -869,7 +869,7 @@ img {
   font-size: 2.5rem;
 
   z-index: var(--z-tooltip);
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86);
+  /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86); */
 }
 
 .backgroundallconstruction {
@@ -1079,7 +1079,7 @@ img {
   .nav__item {
     margin-right: 1.5rem;
     margin-bottom: 0;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.78);
+    /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.78); */
     padding-top: 5%;
   }
   .nav__toggle {

@@ -361,7 +361,7 @@ img {
 
 .detailonedbedroom1 {
   font-weight: 500;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.58);
+  /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.58); */
   padding-top: 10%;
   padding-left: 1%;
 }
