@@ -62,13 +62,61 @@
         <!-- <div class="parallax home__parallax home__parallax-img2" data-rellax-speed="-7"></div> -->
         <!-- <div class="parallax home__parallax home__parallax-img3" data-rellax-speed="-6"></div> -->
         <!-- <div class="parallax home__parallax home__parallax-img4" data-rellax-speed="-3"></div> -->
-  <video autoplay muted loop id="bg-video">
+         <div class="hero" id="hero">
+  <!-- <div class="slide active" id="s0"><img src="https://files.ayana.com/r/kv-01_v0vmbg_3200x0.webp" /></div> -->
+  <div class="slide active" id="s0">
+    <video autoplay muted loop playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+      <source src="/assets/img/homeefek/videoslide1.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="slide" id="s1"><img src="/assets/img/homeefek/slide2.png" /> </div>
+  <div class="slide" id="s2"><img src="/assets/img/homeefek/slide3.png" /></div>
+  <div class="slide" id="s3"><img src="/assets/img/homeefek/slide4.png" /></div>
+  <div class="slide" id="s4"><img src="/assets/img/homeefek/slide5.png" /></div>
+  <!-- <div class="slide" id="s5"><img src="https://files.ayana.com/r/kv-06_Zto7kw_3200x0.webp" /></div> -->
+
+  <div class="overlay"></div>
+
+  <!-- <div class="nav">
+    <div class="brand">AYANA · BALI</div>
+    <div class="nav-links"><span>Hotels</span><span>Dining</span><span>Spa</span><span>Experiences</span><span>Offers</span></div>
+    <button class="reserve">RESERVE</button>
+  </div> -->
+
+  <!-- <div class="slide-content show" id="content">
+    <div class="label" id="lbl">Hotel 01 · AYANA Bali</div>
+    <div class="title" id="ttl">Villas</div>
+    <div class="sub" id="sub">Your exclusive tranquil haven on the cliff</div>
+    <div class="cta">Discover more &nbsp;→</div>
+  </div> -->
+
+  <!-- <div class="tabs" id="tabBar">
+    <div class="tab active" data-i="0">Villas</div>
+    <div class="tab" data-i="1">Segara</div>
+    <div class="tab" data-i="2">Resort</div>
+    <div class="tab" data-i="3">Rimba</div>
+  </div> -->
+
+  <!-- <div class="bottom">
+    <div class="counter-wrap">
+      <div class="counter"><b id="cur">01</b> / <span id="tot">05</span></div>
+      <div class="num-dots" id="dots"></div>
+    </div>
+    <div class="arrows">
+      <div class="arrow" id="prev">&#8592;</div>
+      <div class="arrow" id="next">&#8594;</div>
+    </div>
+  </div> -->
+
+  <div class="prog-bar" id="prog"></div>
+</div>
+  <!-- <video autoplay muted loop id="bg-video">
     <source src="assets/img/home/1080.mp4" type="video/mp4">
-</video>
+</video> -->
 
-        <!-- <h1 class="parallax home__title" data-rellax-speed="0">Timless Luxury Residences</h1> -->
+          <!-- <h1 class="parallax home__title" data-rellax-speed="0">Timless Luxury Residences</h1>  -->
 
-        <!-- <span class="parallax home__subtitle" data-rellax-speed="0">Discover the ultimate villa in Indonesia's most breathtaking destinations.</span> -->
+        <!-- <span class="parallax home__subtitle" data-rellax-speed="0">Discover the ultimate villa in Indonesia's most breathtaking destinations.</span>  -->
         <span class="parallax home__scrolldown" data-rellax-speed="-5"
           ><a href="#section"><i class="bx bx-chevron-down"></i></a
         ></span>
@@ -303,5 +351,116 @@ enduring value, crafted with care and distinction.
     <script src="assets/js/main.js"></script>
 
     <script src="assets/bootstrap537/js/bootstrap.bundle.min.js"></script>
+    <script>
+  const DATA = [
+    { lbl: "Hotel 01 · AYANA Bali", ttl: "Villas", sub: "Your exclusive tranquil haven on the cliff" },
+    { lbl: "Hotel 02 · AYANA Bali", ttl: "Segara", sub: "Intimate hilltop elegance meets Balinese tradition" },
+    { lbl: "Hotel 03 · AYANA Bali", ttl: "Resort", sub: "A serene escape by the sea — home of the Rock Bar" },
+    { lbl: "Hotel 04 · AYANA Bali", ttl: "Rimba", sub: "Enveloped in forest tranquility and natural wonder" },
+    { lbl: "AYANA Bali · Experiences", ttl: "Paradise awaits", sub: "Explore the expansive AYANA estate" },
+    // { lbl: "AYANA Bali · Dining", ttl: "World-class dining", sub: "From cliff-side cocktails to authentic Balinese cuisine" },
+  ];
+  const TOTAL = 5,
+    DUR = 5000;
+  let cur = 0,
+    auto,
+    progRaf,
+    progStart,
+    progPaused = false;
+  const slides = document.querySelectorAll(".slide");
+  // const tabs = document.querySelectorAll(".tab");
+  // const dotsEl = document.getElementById("dots");
+  const content = document.getElementById("content");
+  const progBar = document.getElementById("prog");
+
+  // for (let i = 0; i < TOTAL; i++) {
+  //   const d = document.createElement("div");
+  //   d.className = "ndot" + (i === 0 ? " active" : "");
+  //   d.onclick = () => goTo(i);
+  //   dotsEl.appendChild(d);
+  // }
+
+  // function updateContent() {
+  //   content.classList.remove("show");
+  //   setTimeout(() => {
+  //     document.getElementById("lbl").textContent = DATA[cur].lbl;
+  //     document.getElementById("ttl").textContent = DATA[cur].ttl;
+  //     document.getElementById("sub").textContent = DATA[cur].sub;
+  //     document.getElementById("cur").textContent = String(cur + 1).padStart(2, "0");
+  //     content.classList.add("show");
+  //   }, 200);
+  // }
+
+  // function updateDots() {
+  //   document.querySelectorAll(".ndot").forEach((d, i) => (d.className = "ndot" + (i === cur ? " active" : "")));
+  //   tabs.forEach((t) => (t.className = "tab" + (+t.dataset.i === cur % 4 ? " active" : "")));
+  // }
+
+  function goTo(n, skipProg) {
+    const prev = cur;
+    cur = (n + TOTAL) % TOTAL;
+    slides[prev].classList.remove("active");
+    slides[prev].classList.add("prev");
+    setTimeout(() => slides[prev].classList.remove("prev"), 1500);
+    slides[cur].classList.add("active");
+    // reset ken burns on newly active slide
+    // const img = slides[cur].querySelector("img");
+    // img.style.animation = "none";
+    // void img.offsetWidth;
+    // img.style.animation = "";
+
+    const img = slides[cur].querySelector("img");
+    if (img) {
+      img.style.animation = "none";
+      void img.offsetWidth;
+      img.style.animation = "";
+    }
+    const vid = slides[cur].querySelector("video");
+    if (vid) {
+      vid.currentTime = 0;
+      vid.play();
+    }
+
+    // updateContent();
+    // updateDots();
+    if (!skipProg) startProg();
+  }
+
+  function startProg() {
+    cancelAnimationFrame(progRaf);
+    progBar.style.transition = "none";
+    progBar.style.width = "0%";
+    progStart = performance.now();
+    function tick(t) {
+      const pct = Math.min(100, ((t - progStart) / DUR) * 100);
+      progBar.style.width = pct + "%";
+      if (pct < 100) progRaf = requestAnimationFrame(tick);
+      else {
+        // goTo(cur + 1, true);
+        goTo((cur + 1) % TOTAL, true);
+
+        startProg();
+      }
+    }
+    progRaf = requestAnimationFrame(tick);
+  }
+
+  // document.getElementById("prev").onclick = () => {
+  //   cancelAnimationFrame(progRaf);
+  //   goTo(cur - 1);
+  // };
+  // document.getElementById("next").onclick = () => {
+  //   cancelAnimationFrame(progRaf);
+  //   goTo(cur + 1);
+  // };
+  // tabs.forEach((t) =>
+  //   t.addEventListener("click", () => {
+  //     cancelAnimationFrame(progRaf);
+  //     goTo(+t.dataset.i);
+  //   }),
+  // );
+
+  startProg();
+</script>
   </body>
 </html>
