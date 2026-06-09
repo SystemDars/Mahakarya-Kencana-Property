@@ -65,7 +65,210 @@
           <div class="row">
             <div class="col-4">
               <h4 class="listtittle2">La Tropical One</h4>
-              <a href="https://www.airbnb.com/rooms/1254316850467370453?source_impression_id=p3_1758618535_P3esb6DWMHD2bRde" class="myButton">Reserve</a>
+              <!-- <a href="https://www.airbnb.com/rooms/1254316850467370453?source_impression_id=p3_1758618535_P3esb6DWMHD2bRde" class="myButton">Reserve</a> -->
+            
+                 <!-- start reserve  -->
+                   <div class="reserve-wrapper">
+                <a href="#" class="myButton" id="reserveBtn">Reserve</a>
+                <!-- start modal  -->
+                <div id="bookingModal">
+                  <div class="booking-modal-content">
+                    <!-- HEADER -->
+                    <div class="mh">
+                      <div>
+                        <div class="logo-row">
+                          <div class="logo-txt">
+                            <div class="logo-name">Villa <em>Marenasol</em></div>
+                            <!-- <div class="logo-sub">Bali · Private Villas</div> -->
+                          </div>
+                        </div>
+                        <div class="reserve-lbl">Reserve</div>
+                      </div>
+                      <button class="close-btn" id="closeBookingModal">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 1L10 10M10 1L1 10" stroke="#9A9088" stroke-width="1.2" stroke-linecap="round" /></svg>
+                        Close
+                      </button>
+                    </div>
+
+                    <!-- VILLA -->
+                    <div class="fw">
+                      <div class="flbl">Villa</div>
+                      <div class="fbox" id="villa-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" />
+                          <path d="M6 14V9h4v5" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" />
+                        </svg>
+                        <div class="fval" id="villa-val">La Tropical One</div>
+                        <div class="dvr"></div>
+                        <svg class="arr" id="villa-arr" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#9A9088" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      </div>
+                      <div class="dd" id="villa-dd">
+                        <div class="ddo sel" data-val="La Tropical One — 3 Br">
+                          <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
+                          <div class="ddo-info">
+                            <div class="ddo-lbl">La Tropical One</div>
+                            <div class="ddo-desc">3 Bedroom · Private Pool</div>
+                          </div>
+                        </div>
+                        <div class="ddo" data-val="La Tropical Two — 2 Br">
+                          <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
+                          <div class="ddo-info">
+                            <div class="ddo-lbl">La Tropical Two</div>
+                            <div class="ddo-desc">2 Bedroom · Private Pool</div>
+                          </div>
+                        </div>
+                        <div class="ddo" data-val="La Tropical Three — 1 Br">
+                          <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
+                          <div class="ddo-info">
+                            <div class="ddo-lbl">Marenasol</div>
+                            <div class="ddo-desc">1 Bedroom · Private Pool</div>
+                          </div>
+                        </div>
+                        <!-- <div class="ddo" data-val="Ocean Suite — 1 Br">
+                          <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M1 11Q4 8 8 11Q12 14 15 11" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" /></svg>
+                          <div class="ddo-info">
+                            <div class="ddo-lbl">Ocean Suite</div>
+                            <div class="ddo-desc">1 Bedroom · Sea View</div>
+                          </div>
+                        </div>
+                         -->
+                        <!-- <div class="ddo" data-val="Cliff Villa — 2 Br">
+                          <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M1 13L6 5L9 9L11 7L15 13Z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
+                          <div class="ddo-info">
+                            <div class="ddo-lbl">Cliff Villa</div>
+                            <div class="ddo-desc">2 Bedroom · Jungle & Ocean</div>
+                          </div>
+                        
+                        
+                        </div> -->
+                      </div>
+                    </div>
+
+                    <!-- DATE -->
+                    <div class="fw">
+                      <div class="flbl">Check-in &amp; Check-out</div>
+                      <div class="fbox" id="date-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <rect x="1" y="3" width="14" height="12" rx="1.5" stroke="#8B6F4E" stroke-width="1.2" />
+                          <path d="M5 1v4M11 1v4M1 7h14" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" />
+                        </svg>
+                        <div class="fval ph" id="date-val">Select dates</div>
+                        <div class="dvr"></div>
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                          <rect x=".5" y="2" width="12" height="10.5" rx="1.2" stroke="#9A9088" stroke-width="1.1" />
+                          <path d="M4 .5v3M9 .5v3M.5 6h12" stroke="#9A9088" stroke-width="1.1" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- CALENDAR -->
+                    <div class="cp" id="cal-panel">
+                      <div class="cn">
+                        <button class="cnb" id="prev-btn">&#8249;</button>
+                        <div class="ctitle" id="cal-title"></div>
+                        <button class="cnb" id="next-btn">&#8250;</button>
+                      </div>
+                      <div class="cbody">
+                        <div class="dnrow" id="dn-row"></div>
+                        <div class="dgrid" id="dgrid"></div>
+                      </div>
+                      <div class="cal-hint" id="cal-hint">Klik tanggal check-in</div>
+                      <div class="info-note">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <circle cx="6" cy="6" r="5" stroke="#8B6F4E" stroke-width="1" />
+                          <path d="M6 5.5v3M6 4h.01" stroke="#8B6F4E" stroke-width="1.1" stroke-linecap="round" />
+                        </svg>
+                        Pilih check-in lalu check-out (maksimal 2 malam)
+                      </div>
+                    </div>
+
+                    <!-- GUEST -->
+                    <div class="fw">
+                      <div class="flbl">Guest</div>
+                      <div class="fbox" id="guest-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <circle cx="6" cy="4.5" r="2.5" stroke="#8B6F4E" stroke-width="1.2" />
+                          <path d="M1 14c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" />
+                          <circle cx="12" cy="5" r="2" stroke="#8B6F4E" stroke-width="1.1" />
+                          <path d="M14 14c0-2.2-1.3-4-3-4.5" stroke="#8B6F4E" stroke-width="1.1" stroke-linecap="round" />
+                        </svg>
+                        <div class="fval" id="guest-val">1 Room, 2 Adults</div>
+                        <div class="dvr"></div>
+                        <svg class="arr" id="g-arr" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#9A9088" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      </div>
+                    </div>
+                    <div class="gp" id="guest-panel">
+                      <div id="rooms-list"></div>
+                      <button class="addr" id="add-room-btn">+ Add Room</button>
+                    </div>
+
+                    <!-- CODE -->
+                    <div class="codew">
+                      <div class="flbl" style="margin-bottom: 6px">Booking Code (Optional)</div>
+                      <input class="codei" id="booking-code" placeholder="Enter code" type="text" />
+                    </div>
+
+                    <!-- CTA -->
+                    <button class="cta" id="cta-btn" disabled>
+                      Check Availability &nbsp;
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#F5F2ED" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    </button>
+
+                    <!-- BOOKING OPTIONS -->
+                    <div class="booking-panel" id="booking-panel">
+                      <div class="book-title">Choose how to book</div>
+                      <div class="book-opt direct" id="btn-direct">
+                        <div class="book-opt-left">
+                          <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#F5F2ED" stroke-width="1.2" stroke-linejoin="round" />
+                            <path d="M6 14V9h4v5" stroke="#F5F2ED" stroke-width="1.2" stroke-linecap="round" />
+                          </svg>
+                          <div class="book-lbl">Check Availability via <strong style="margin-left: 4px">Direct Booking</strong></div>
+                        </div>
+                        <div class="bsep"></div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#F5F2ED" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      </div>
+                      <div class="book-opt" id="btn-airbnb">
+                        <div class="book-opt-left">
+                          <div class="book-lbl">
+                            Book via &nbsp;
+                            <svg width="15" height="15" viewBox="0 0 32 32" fill="#FF5A5F">
+                              <path
+                                d="M16 1C8.268 1 2 7.268 2 15c0 4.418 2.015 8.374 5.2 11.02L16 31l8.8-4.98A13.94 13.94 0 0030 15C30 7.268 23.732 1 16 1zm0 21.5c-4.142 0-7.5-3.358-7.5-7.5S11.858 7.5 16 7.5s7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z"
+                              />
+                            </svg>
+                            <span class="airbnb-txt">airbnb</span>
+                          </div>
+                        </div>
+                        <div class="bsep"></div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#9A9088" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      </div>
+                      <div class="book-opt" id="btn-wa">
+                        <div class="book-opt-left">
+                          <div class="book-lbl">
+                            Book via &nbsp;
+                            <svg width="17" height="17" viewBox="0 0 32 32" fill="none">
+                              <circle cx="16" cy="16" r="15" fill="#25D366" />
+                              <path
+                                d="M23.5 20.5c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.3 1.5-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.2-1.2-3-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .4-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.2 2.8 4.3 6.8 6 .9.4 1.7.6 2.2.8.9.3 1.8.2 2.4.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4z"
+                                fill="#fff"
+                              />
+                            </svg>
+                            <span class="wa-txt">WhatsApp</span>
+                          </div>
+                        </div>
+                        <div class="bsep"></div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#9A9088" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end modal  -->
+              </div>
+
+                 <!-- end reserve -->
+            
             </div>
 
             <div class="col-8">
@@ -532,6 +735,573 @@ the sunlit master suites to the seamless indoor-outdoor flow — all designed to
     
 
       
+    </script>
+
+   <script>
+      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var DNAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      var PRICES = { "05": 2.6, "06": 2.8, "07": 3.1, "08": 2.9, "09": 2.6, 10: 2.5, 11: 2.7, 12: 3.4 };
+      var RED = [];
+
+      async function loadHolidays(year) {
+        try {
+          const response = await fetch("https://date.nager.at/api/v3/PublicHolidays/" + year + "/ID");
+
+          const data = await response.json();
+
+          RED = data.map((item) => item.date);
+
+          buildCal();
+        } catch (err) {
+          console.error("Gagal mengambil hari libur", err);
+        }
+      }
+
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var cy = today.getFullYear(),
+        cm = today.getMonth();
+      var cinDate = null,
+        coutDate = null;
+      var rooms = [{ adults: 2, children: 0 }];
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+      function dk(d) {
+        return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+      }
+      // function isRed(d) {
+      //   return RED.indexOf(dk(d)) > -1;
+      // }
+
+      function isRed(d) {
+        return RED.includes(dk(d));
+      }
+
+      function fmt(d) {
+        return d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3) + " " + d.getFullYear();
+      }
+      function addDay(d, n) {
+        var r = new Date(d.getTime());
+        r.setDate(r.getDate() + n);
+        return r;
+      }
+
+      function closeAll() {
+        document.getElementById("villa-dd").classList.remove("open");
+        document.getElementById("cal-panel").style.display = "none";
+        document.getElementById("guest-panel").style.display = "none";
+        document.getElementById("g-arr").style.transform = "";
+        document.getElementById("villa-arr").style.transform = "";
+      }
+
+      // ---- VILLA ----
+      document.getElementById("villa-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+        var dd = document.getElementById("villa-dd");
+        var isOpen = dd.classList.contains("open");
+        closeAll();
+        if (!isOpen) {
+          dd.classList.add("open");
+          document.getElementById("villa-arr").style.transform = "rotate(180deg)";
+        }
+      });
+      document
+        .getElementById("villa-dd")
+        .querySelectorAll(".ddo")
+        .forEach(function (o) {
+          o.addEventListener("click", function (e) {
+            e.stopPropagation();
+            document.getElementById("villa-val").textContent = this.dataset.val;
+            document
+              .getElementById("villa-dd")
+              .querySelectorAll(".ddo")
+              .forEach(function (x) {
+                x.classList.remove("sel");
+              });
+            this.classList.add("sel");
+            closeAll();
+          });
+        });
+
+      // ---- CALENDAR ----
+      function buildCal() {
+        document.getElementById("cal-title").textContent = MONTHS[cm] + " " + cy;
+        var minM = new Date(today.getFullYear(), today.getMonth(), 1);
+        document.getElementById("prev-btn").disabled = new Date(cy, cm, 1) <= minM;
+
+        var dnRow = document.getElementById("dn-row");
+        dnRow.innerHTML = "";
+        DNAMES.forEach(function (d) {
+          var el = document.createElement("div");
+          el.className = "dname";
+          el.textContent = d;
+          dnRow.appendChild(el);
+        });
+
+        var grid = document.getElementById("dgrid");
+        grid.innerHTML = "";
+
+        var firstDay = new Date(cy, cm, 1).getDay();
+        var dim = new Date(cy, cm + 1, 0).getDate();
+        var prevDim = new Date(cy, cm, 0).getDate();
+
+        // filler before
+        for (var i = 0; i < firstDay; i++) {
+          var el = document.createElement("div");
+          el.className = "day-cell faded";
+          var n = document.createElement("div");
+          n.className = "day-num";
+          n.textContent = prevDim - firstDay + 1 + i;
+          el.appendChild(n);
+          grid.appendChild(el);
+        }
+
+        // real days — use closure via data attribute + single listener on grid
+        for (var d = 1; d <= dim; d++) {
+          var date = new Date(cy, cm, d);
+          var cell = document.createElement("div");
+          cell.className = "day-cell";
+          cell.dataset.ts = date.getTime(); // store timestamp
+
+          if (date < today) {
+            cell.classList.add("past");
+          } else {
+            var price = (PRICES[pad(date.getMonth() + 1)] || 2.6).toFixed(1) + "M";
+            if (isRed(date)) cell.classList.add("red");
+            // highlight selected
+            if (cinDate && date.getTime() === cinDate.getTime()) cell.classList.add("checkin");
+            if (coutDate && date.getTime() === coutDate.getTime()) cell.classList.add("checkout");
+
+            var pEl = document.createElement("div");
+            pEl.className = "day-price";
+            pEl.textContent = price;
+            cell.appendChild(pEl);
+          }
+
+          var nEl = document.createElement("div");
+          nEl.className = "day-num";
+          nEl.textContent = d;
+          cell.insertBefore(nEl, cell.firstChild);
+          grid.appendChild(cell);
+        }
+
+        // filler after
+        var total = firstDay + dim;
+        var rem = total % 7 === 0 ? 0 : 7 - (total % 7);
+        for (var j = 1; j <= rem; j++) {
+          var el2 = document.createElement("div");
+          el2.className = "day-cell faded";
+          var n2 = document.createElement("div");
+          n2.className = "day-num";
+          n2.textContent = j;
+          el2.appendChild(n2);
+          grid.appendChild(el2);
+        }
+
+        updateHint();
+        updateDateField();
+      }
+
+      // Single delegated click listener on grid — no per-cell onclick
+      document.getElementById("dgrid").addEventListener("click", function (e) {
+        var cell = e.target.closest(".day-cell");
+        if (!cell) return;
+        if (cell.classList.contains("past")) return;
+        if (cell.classList.contains("faded")) return;
+        if (!cell.dataset.ts) return;
+
+        var picked = new Date(parseInt(cell.dataset.ts, 10));
+
+        // Klik pertama = check-in
+        if (!cinDate || coutDate) {
+          cinDate = picked;
+          coutDate = null;
+          document.getElementById("cta-btn").disabled = true;
+          buildCal();
+          return;
+        }
+
+        // Klik kedua = check-out
+        var nights = Math.round((picked.getTime() - cinDate.getTime()) / 86400000);
+
+        if (nights < 1) {
+          cinDate = picked;
+          coutDate = null;
+          buildCal();
+          return;
+        }
+
+        if (nights > 2) {
+          alert("Maksimal 2 malam");
+          return;
+        }
+
+        coutDate = picked;
+
+        document.getElementById("cta-btn").disabled = false;
+
+        buildCal();
+
+        // Tutup kalender setelah checkout dipilih
+        document.getElementById("cal-panel").style.display = "none";
+
+        // Tutup dropdown lain
+        document.getElementById("villa-dd").classList.remove("open");
+        document.getElementById("guest-panel").style.display = "none";
+
+        // if (nights > 2) {
+        //   alert("Maksimal 2 malam");
+        //   return;
+        // }
+
+        // coutDate = picked;
+
+        // document.getElementById("cta-btn").disabled = false;
+        // document.getElementById("booking-panel").classList.remove("open");
+
+        buildCal();
+
+        setTimeout(function () {
+          document.getElementById("cal-panel").style.display = "none";
+        }, 450);
+      });
+
+      // function updateHint() {
+      //   var h = document.getElementById("cal-hint");
+      //   if (!cinDate) {
+      //     h.textContent = "Pilih check-in lalu check-out (1 atau 2 malam)";
+      //     return;
+      //   }
+      //   h.innerHTML = "<strong>" + fmt(cinDate) + "</strong> → <strong>" + fmt(coutDate) + '</strong> &nbsp;<span class="npill">1 malam</span>';
+      // }
+
+      function updateHint() {
+        var h = document.getElementById("cal-hint");
+
+        if (!cinDate) {
+          h.textContent = "Pilih check-in lalu check-out (maksimal 2 malam)";
+          return;
+        }
+
+        if (!coutDate) {
+          h.innerHTML = "<strong>" + fmt(cinDate) + "</strong>";
+          return;
+        }
+
+        var nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+
+        h.innerHTML = "<strong>" + fmt(cinDate) + "</strong> → <strong>" + fmt(coutDate) + "</strong> &nbsp;<span class='npill'>" + nights + " malam</span>";
+      }
+
+      function updateDateField() {
+        var el = document.getElementById("date-val");
+        if (!cinDate) {
+          el.textContent = "Select dates";
+          el.className = "fval ph";
+          return;
+        }
+        // el.textContent = fmt(cinDate) + " – " + fmt(coutDate);
+        var nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+
+        el.textContent = fmt(cinDate) + " – " + fmt(coutDate) + " (" + nights + " malam)";
+        el.className = "fval";
+      }
+
+      document.getElementById("date-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+        var p = document.getElementById("cal-panel");
+        var isOpen = p.style.display === "block";
+        closeAll();
+        if (!isOpen) {
+          p.style.display = "block";
+          buildCal();
+        }
+      });
+      // document.getElementById("prev-btn").addEventListener("click", function (e) {
+      //   e.stopPropagation();
+      //   cm--;
+      //   if (cm < 0) {
+      //     cm = 11;
+      //     cy--;
+      //   }
+      //   buildCal();
+      // });
+      // document.getElementById("next-btn").addEventListener("click", function (e) {
+      //   e.stopPropagation();
+      //   cm++;
+      //   if (cm > 11) {
+      //     cm = 0;
+      //     cy++;
+      //   }
+      //   buildCal();
+      // });
+
+      document.getElementById("prev-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        cm--;
+
+        if (cm < 0) {
+          cm = 11;
+          cy--;
+          loadHolidays(cy);
+        }
+
+        buildCal();
+      });
+
+      document.getElementById("next-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        cm++;
+
+        if (cm > 11) {
+          cm = 0;
+          cy++;
+          loadHolidays(cy);
+        }
+
+        buildCal();
+      });
+
+      // ---- GUEST ----
+      document.getElementById("guest-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+        var p = document.getElementById("guest-panel");
+        var isOpen = p.style.display === "block";
+        closeAll();
+        if (!isOpen) {
+          p.style.display = "block";
+          document.getElementById("g-arr").style.transform = "rotate(180deg)";
+          renderRooms();
+        }
+      });
+
+      function renderRooms() {
+        var list = document.getElementById("rooms-list");
+        list.innerHTML = "";
+        rooms.forEach(function (r, i) {
+          var div = document.createElement("div");
+          div.className = "ri";
+          div.innerHTML =
+            '<div class="rt"><div class="rn">Room ' +
+            (i + 1) +
+            "</div>" +
+            (rooms.length > 1 ? '<button class="rmb" data-i="' + i + '">Remove</button>' : "") +
+            "</div>" +
+            '<div class="gr"><div class="gl">Adults</div><div class="ctr"><button class="cb" data-i="' +
+            i +
+            '" data-t="adults" data-d="-1"' +
+            (r.adults <= 1 ? " disabled" : "") +
+            '>−</button><div class="cv">' +
+            r.adults +
+            '</div><button class="cb" data-i="' +
+            i +
+            '" data-t="adults" data-d="1"' +
+            (r.adults >= 6 ? " disabled" : "") +
+            ">+</button></div></div>" +
+            '<div class="gr"><div class="gl">Children <span style="font-size:9px;color:#B0A89E">(0–12)</span></div><div class="ctr"><button class="cb" data-i="' +
+            i +
+            '" data-t="children" data-d="-1"' +
+            (r.children <= 0 ? " disabled" : "") +
+            '>−</button><div class="cv">' +
+            r.children +
+            '</div><button class="cb" data-i="' +
+            i +
+            '" data-t="children" data-d="1"' +
+            (r.children >= 4 ? " disabled" : "") +
+            ">+</button></div></div>";
+          list.appendChild(div);
+        });
+        list.querySelectorAll(".rmb").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            e.stopPropagation();
+            rooms.splice(+this.dataset.i, 1);
+            renderRooms();
+          });
+        });
+        list.querySelectorAll(".cb").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var i = +this.dataset.i,
+              t = this.dataset.t,
+              d = +this.dataset.d;
+            if (t === "adults") {
+              var v = rooms[i].adults + d;
+              if (v < 1 || v > 6) return;
+              rooms[i].adults = v;
+            } else {
+              var v2 = rooms[i].children + d;
+              if (v2 < 0 || v2 > 4) return;
+              rooms[i].children = v2;
+            }
+            renderRooms();
+          });
+        });
+        document.getElementById("add-room-btn").style.display = rooms.length >= 5 ? "none" : "flex";
+        var ta = rooms.reduce(function (s, r) {
+          return s + r.adults;
+        }, 0);
+        var tc = rooms.reduce(function (s, r) {
+          return s + r.children;
+        }, 0);
+        var t = rooms.length + " Room" + (rooms.length > 1 ? "s" : "") + ", " + ta + " Adult" + (ta > 1 ? "s" : "");
+        if (tc) t += ", " + tc + " Child" + (tc > 1 ? "ren" : "");
+        document.getElementById("guest-val").textContent = t;
+      }
+      document.getElementById("add-room-btn").addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (rooms.length >= 5) return;
+        rooms.push({ adults: 1, children: 0 });
+        renderRooms();
+      });
+
+      // ---- CTA + BOOKING OPTIONS ----
+      // function getMsg() {
+      //   var ta = rooms.reduce(function (s, r) {
+      //     return s + r.adults;
+      //   }, 0);
+      //   var tc = rooms.reduce(function (s, r) {
+      //     return s + r.children;
+      //   }, 0);
+      //   return (
+      //     "Halo, saya ingin memesan " +
+      //     document.getElementById("villa-val").textContent +
+      //     (cinDate ? ", check-in " + fmt(cinDate) : "") +
+      //     (coutDate ? ", check-out " + fmt(coutDate) + " (1 malam)" : "") +
+      //     ", " +
+      //     rooms.length +
+      //     " kamar, " +
+      //     ta +
+      //     " adults" +
+      //     (tc ? ", " + tc + " children" : "")
+      //   );
+      // }
+
+      function getMsg() {
+        var bookingCode = document.getElementById("booking-code").value.trim();
+
+        var ta = rooms.reduce(function (s, r) {
+          return s + r.adults;
+        }, 0);
+
+        var tc = rooms.reduce(function (s, r) {
+          return s + r.children;
+        }, 0);
+
+        var nights = 0;
+
+        if (cinDate && coutDate) {
+          nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+        }
+
+        // var msg =
+        //   "Halo, saya ingin memesan\n\n" +
+        //   "Villa: " +
+        //   document.getElementById("villa-val").textContent +
+        //   "\n" +
+        //   "Check-in: " +
+        //   (cinDate ? fmt(cinDate) : "-") +
+        //   "\n" +
+        //   "Check-out: " +
+        //   (coutDate ? fmt(coutDate) : "-") +
+        //   "\n" +
+        //   "Room: " +
+        //   rooms.length +
+        //   "\n" +
+        //   "Adults: " +
+        //   ta +
+        //   "\n" +
+        //   "Children: " +
+        //   tc;
+
+        var msg =
+          "Halo, saya ingin memesan\n\n" +
+          "Villa: " +
+          document.getElementById("villa-val").textContent +
+          "\n" +
+          "Check-in: " +
+          (cinDate ? fmt(cinDate) : "-") +
+          "\n" +
+          "Check-out: " +
+          (coutDate ? fmt(coutDate) : "-") +
+          "\n" +
+          "Duration: " +
+          nights +
+          " Night" +
+          (nights > 1 ? "s" : "") +
+          "\n" +
+          "Room: " +
+          rooms.length +
+          "\n" +
+          "Adults: " +
+          ta +
+          "\n" +
+          "Children: " +
+          tc;
+
+        if (bookingCode !== "") {
+          msg += "\nBooking Code: " + bookingCode;
+        }
+
+        return msg;
+      }
+
+      document.getElementById("cta-btn").addEventListener("click", function () {
+        document.getElementById("booking-panel").classList.toggle("open");
+      });
+      document.getElementById("btn-direct").addEventListener("click", function () {
+        alert("Mengarahkan ke Direct Booking...\n\n" + getMsg());
+      });
+      document.getElementById("btn-airbnb").addEventListener("click", function () {
+        window.open(
+          "https://www.airbnb.com/rooms/1490374046707839891?search_mode=regular_search&adults=1&check_in=2025-09-03&check_out=2025-09-08&children=0&infants=0&pets=0&source_impression_id=p3_1756868329_P30ZFfpN3GCk0uWS&previous_page_section_name=1000&federated_search_id=189efb75-a3d5-475a-ab08-ca886f17c568",
+          "_blank",
+        );
+      });
+      document.getElementById("btn-wa").addEventListener("click", function () {
+        window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(getMsg()), "_blank");
+      });
+
+      // close on outside click
+      document.addEventListener("click", function () {
+        document.getElementById("dgrid").addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+        closeAll();
+      });
+      document.querySelector(".modal").addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+
+      // buildCal();
+      // renderRooms();
+      loadHolidays(cy);
+      renderRooms();
+    </script>
+
+
+    <script>
+      document.getElementById("reserveBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const modal = document.getElementById("bookingModal");
+
+        if (modal.style.display === "block") {
+          modal.style.display = "none";
+        } else {
+          modal.style.display = "block";
+        }
+      });
+
+      document.getElementById("closeBookingModal").addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        document.getElementById("bookingModal").style.display = "none";
+      });
     </script>
 
     
