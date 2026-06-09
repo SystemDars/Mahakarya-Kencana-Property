@@ -1542,7 +1542,7 @@ body {
 #bookingModal {
   display: none;
   position: absolute;
-  top: 60px;
+  top: calc(100% + 25px);
   left: 0;
   width: 380px;
   height: 80vh;

@@ -64,14 +64,14 @@
 
           <div class="row">
             <div class="col-4">
-              <h4 class="listtittle2">MarénaSol1</h4>
+              <h4 class="listtittle2">MarénaSol</h4>
               <!-- <a
                 href="https://www.airbnb.com/rooms/1490374046707839891?search_mode=regular_search&adults=1&check_in=2025-09-03&check_out=2025-09-08&children=0&infants=0&pets=0&source_impression_id=p3_1756868329_P30ZFfpN3GCk0uWS&previous_page_section_name=1000&federated_search_id=189efb75-a3d5-475a-ab08-ca886f17c568"
                 class="myButton"
                 >Reserve</a
               > -->
               <div class="reserve-wrapper">
-                <a href="#" class="myButton" id="reserveBtn">Reserve1</a>
+                <a href="#" class="myButton" id="reserveBtn">Reserve</a>
                 <!-- start modal  -->
                 <div id="bookingModal">
                   <div class="booking-modal-content">
@@ -86,7 +86,7 @@
                         </div>
                         <div class="reserve-lbl">Reserve</div>
                       </div>
-                      <button class="close-btn">
+                      <button class="close-btn" id="closeBookingModal">
                         <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 1L10 10M10 1L1 10" stroke="#9A9088" stroke-width="1.2" stroke-linecap="round" /></svg>
                         Close
                       </button>
@@ -100,7 +100,7 @@
                           <path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" />
                           <path d="M6 14V9h4v5" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" />
                         </svg>
-                        <div class="fval" id="villa-val">La Tropical One — 3 Br</div>
+                        <div class="fval" id="villa-val">La Tropical One</div>
                         <div class="dvr"></div>
                         <svg class="arr" id="villa-arr" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#9A9088" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
                       </div>
@@ -112,34 +112,37 @@
                             <div class="ddo-desc">3 Bedroom · Private Pool</div>
                           </div>
                         </div>
-                        <div class="ddo" data-val="La Tropical Two — 4 Br">
+                        <div class="ddo" data-val="La Tropical Two — 2 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
                           <div class="ddo-info">
                             <div class="ddo-lbl">La Tropical Two</div>
-                            <div class="ddo-desc">4 Bedroom · Beachfront</div>
+                            <div class="ddo-desc">2 Bedroom · Private Pool</div>
                           </div>
                         </div>
-                        <div class="ddo" data-val="La Tropical Three — 5 Br">
+                        <div class="ddo" data-val="La Tropical Three — 1 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
                           <div class="ddo-info">
-                            <div class="ddo-lbl">La Tropical Three</div>
-                            <div class="ddo-desc">5 Bedroom · Clifftop View</div>
+                            <div class="ddo-lbl">Marenasol</div>
+                            <div class="ddo-desc">1 Bedroom · Private Pool</div>
                           </div>
                         </div>
-                        <div class="ddo" data-val="Ocean Suite — 1 Br">
+                        <!-- <div class="ddo" data-val="Ocean Suite — 1 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M1 11Q4 8 8 11Q12 14 15 11" stroke="#8B6F4E" stroke-width="1.2" stroke-linecap="round" /></svg>
                           <div class="ddo-info">
                             <div class="ddo-lbl">Ocean Suite</div>
                             <div class="ddo-desc">1 Bedroom · Sea View</div>
                           </div>
                         </div>
-                        <div class="ddo" data-val="Cliff Villa — 2 Br">
+                         -->
+                        <!-- <div class="ddo" data-val="Cliff Villa — 2 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M1 13L6 5L9 9L11 7L15 13Z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
                           <div class="ddo-info">
                             <div class="ddo-lbl">Cliff Villa</div>
                             <div class="ddo-desc">2 Bedroom · Jungle & Ocean</div>
                           </div>
-                        </div>
+                        
+                        
+                        </div> -->
                       </div>
                     </div>
 
@@ -721,13 +724,31 @@
         }, 450);
       });
 
+      // function updateHint() {
+      //   var h = document.getElementById("cal-hint");
+      //   if (!cinDate) {
+      //     h.textContent = "Pilih check-in lalu check-out (1 atau 2 malam)";
+      //     return;
+      //   }
+      //   h.innerHTML = "<strong>" + fmt(cinDate) + "</strong> → <strong>" + fmt(coutDate) + '</strong> &nbsp;<span class="npill">1 malam</span>';
+      // }
+
       function updateHint() {
         var h = document.getElementById("cal-hint");
+
         if (!cinDate) {
-          h.textContent = "Pilih check-in lalu check-out (1 atau 2 malam)";
+          h.textContent = "Pilih check-in lalu check-out (maksimal 2 malam)";
           return;
         }
-        h.innerHTML = "<strong>" + fmt(cinDate) + "</strong> → <strong>" + fmt(coutDate) + '</strong> &nbsp;<span class="npill">1 malam</span>';
+
+        if (!coutDate) {
+          h.innerHTML = "<strong>" + fmt(cinDate) + "</strong>";
+          return;
+        }
+
+        var nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+
+        h.innerHTML = "<strong>" + fmt(cinDate) + "</strong> → <strong>" + fmt(coutDate) + "</strong> &nbsp;<span class='npill'>" + nights + " malam</span>";
       }
 
       function updateDateField() {
@@ -737,7 +758,10 @@
           el.className = "fval ph";
           return;
         }
-        el.textContent = fmt(cinDate) + " – " + fmt(coutDate);
+        // el.textContent = fmt(cinDate) + " – " + fmt(coutDate);
+        var nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+
+        el.textContent = fmt(cinDate) + " – " + fmt(coutDate) + " (" + nights + " malam)";
         el.className = "fval";
       }
 
@@ -891,25 +915,94 @@
       });
 
       // ---- CTA + BOOKING OPTIONS ----
+      // function getMsg() {
+      //   var ta = rooms.reduce(function (s, r) {
+      //     return s + r.adults;
+      //   }, 0);
+      //   var tc = rooms.reduce(function (s, r) {
+      //     return s + r.children;
+      //   }, 0);
+      //   return (
+      //     "Halo, saya ingin memesan " +
+      //     document.getElementById("villa-val").textContent +
+      //     (cinDate ? ", check-in " + fmt(cinDate) : "") +
+      //     (coutDate ? ", check-out " + fmt(coutDate) + " (1 malam)" : "") +
+      //     ", " +
+      //     rooms.length +
+      //     " kamar, " +
+      //     ta +
+      //     " adults" +
+      //     (tc ? ", " + tc + " children" : "")
+      //   );
+      // }
+
       function getMsg() {
+        var bookingCode = document.getElementById("booking-code").value.trim();
+
         var ta = rooms.reduce(function (s, r) {
           return s + r.adults;
         }, 0);
+
         var tc = rooms.reduce(function (s, r) {
           return s + r.children;
         }, 0);
-        return (
-          "Halo, saya ingin memesan " +
+
+        var nights = 0;
+
+        if (cinDate && coutDate) {
+          nights = Math.round((coutDate.getTime() - cinDate.getTime()) / 86400000);
+        }
+
+        // var msg =
+        //   "Halo, saya ingin memesan\n\n" +
+        //   "Villa: " +
+        //   document.getElementById("villa-val").textContent +
+        //   "\n" +
+        //   "Check-in: " +
+        //   (cinDate ? fmt(cinDate) : "-") +
+        //   "\n" +
+        //   "Check-out: " +
+        //   (coutDate ? fmt(coutDate) : "-") +
+        //   "\n" +
+        //   "Room: " +
+        //   rooms.length +
+        //   "\n" +
+        //   "Adults: " +
+        //   ta +
+        //   "\n" +
+        //   "Children: " +
+        //   tc;
+
+        var msg =
+          "Halo, saya ingin memesan\n\n" +
+          "Villa: " +
           document.getElementById("villa-val").textContent +
-          (cinDate ? ", check-in " + fmt(cinDate) : "") +
-          (coutDate ? ", check-out " + fmt(coutDate) + " (1 malam)" : "") +
-          ", " +
+          "\n" +
+          "Check-in: " +
+          (cinDate ? fmt(cinDate) : "-") +
+          "\n" +
+          "Check-out: " +
+          (coutDate ? fmt(coutDate) : "-") +
+          "\n" +
+          "Duration: " +
+          nights +
+          " Night" +
+          (nights > 1 ? "s" : "") +
+          "\n" +
+          "Room: " +
           rooms.length +
-          " kamar, " +
+          "\n" +
+          "Adults: " +
           ta +
-          " adults" +
-          (tc ? ", " + tc + " children" : "")
-        );
+          "\n" +
+          "Children: " +
+          tc;
+
+        if (bookingCode !== "") {
+          msg += "\nBooking Code: " + bookingCode;
+        }
+
+        return msg;
       }
 
       document.getElementById("cta-btn").addEventListener("click", function () {
@@ -919,7 +1012,10 @@
         alert("Mengarahkan ke Direct Booking...\n\n" + getMsg());
       });
       document.getElementById("btn-airbnb").addEventListener("click", function () {
-        window.open("https://www.airbnb.com/s/Bali", "_blank");
+        window.open(
+          "https://www.airbnb.com/rooms/1490374046707839891?search_mode=regular_search&adults=1&check_in=2025-09-03&check_out=2025-09-08&children=0&infants=0&pets=0&source_impression_id=p3_1756868329_P30ZFfpN3GCk0uWS&previous_page_section_name=1000&federated_search_id=189efb75-a3d5-475a-ab08-ca886f17c568",
+          "_blank",
+        );
       });
       document.getElementById("btn-wa").addEventListener("click", function () {
         window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(getMsg()), "_blank");
@@ -953,6 +1049,13 @@
         } else {
           modal.style.display = "block";
         }
+      });
+
+      document.getElementById("closeBookingModal").addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        document.getElementById("bookingModal").style.display = "none";
       });
     </script>
   </body>
