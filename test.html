@@ -57,3 +57,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.3323938552821!2d106.7
 
 font-family: 'Cormorant Garamond', serif !important; font-family: "Cormorant Garamond semibold", serif !important; button { position: absolute; top: 50%; transform: translateY(-50%); background: none; /* Menghilangkan warna background */
 border: none; /* Menghilangkan garis tepi */ padding: 0; /* Menghilangkan ruang dalam */ cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */ outline: inherit; }
+
+<!-- reserve  -->
+document.getElementById("reserveBtn").addEventListener("click", function (e) { e.preventDefault(); const modal = document.getElementById("bookingModal"); if (modal.style.display === "block") { modal.style.display = "none"; } else {
+modal.style.display = "block"; } });

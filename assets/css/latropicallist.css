@@ -475,14 +475,27 @@ img {
 }
 
 /* Button */
-button {
+/* button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+/* background: none; Menghilangkan warna background */
+/* border: none; Menghilangkan garis tepi */
+/* padding: 0; Menghilangkan ruang dalam */
+/* cursor: pointer; Mengubah kursor saat diarahkan ke tombol */
+/* outline: inherit;
+} */
+
+.slider button,
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none; /* Menghilangkan warna background */
-  border: none; /* Menghilangkan garis tepi */
-  padding: 0; /* Menghilangkan ruang dalam */
-  cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   outline: inherit;
 }
 
@@ -919,22 +932,15 @@ button {
 }
 
 /* start modal reserve */
-.booking-modal-content {
-  /* background: #fff;
-  height: auto;
-  width: 360px;
-  max-width: 360px;
-  border: 0.5px solid #ddd8cf;
-  display: block !important; 
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 99999; */
+/* .booking-modal-content {
   width: 350px;
-  margin: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
   background: #fff;
   border: 1px solid #ddd;
-}
+} */
+
 .mh {
   padding: 1.25rem 1.5rem 1rem;
   border-bottom: 0.5px solid #e8e4de;
@@ -1490,7 +1496,7 @@ button {
   font-family: "Jost", sans-serif;
 }
 
-#bookingModal {
+/* #bookingModal {
   display: none;
   position: absolute;
   top: calc(100% + 25px);
@@ -1498,6 +1504,34 @@ button {
   width: 380px;
   height: 80vh;
   z-index: 99999;
+} */
+
+/* #bookingModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+} */
+
+/* Modal muncul di bawah tombol */
+.booking-modal {
+  display: none;
+  position: absolute; /* BUKAN fixed */
+  z-index: 10000;
+}
+.booking-modal .booking-modal-content {
+  background: white;
+  width: 330px;
+  max-width: 90vw;
+  /* border-radius: 12px; */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* Agar halaman tidak bergeser saat modal terbuka */
+body.modal-open {
+  overflow: hidden;
 }
 
 .reserve-wrapper {
@@ -1505,6 +1539,28 @@ button {
   overflow: visible;
   display: inline-block;
   top: 20px;
+}
+
+.reserve-btn {
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  /* margin-left: 20px !important; */
+  background-color: #929293;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  border-radius: 26px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 10px 60px;
+  text-decoration: none;
+  margin-top: 5%;
 }
 
 /* end modal reserve */
