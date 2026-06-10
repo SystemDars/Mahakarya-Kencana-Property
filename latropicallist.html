@@ -120,13 +120,13 @@
         </div>
 
 
-          <div class="ddo" data-val="Marenasol — 1 Br">
+          <!-- <div class="ddo" data-val="Marenasol — 1 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
                           <div class="ddo-info">
                             <div class="ddo-lbl">Marenasol</div>
                             <div class="ddo-desc">1 Bedroom · Private Pool</div>
                           </div>
-                        </div>
+                        </div> -->
       </div>
     </div>
 
@@ -509,13 +509,13 @@ the sunlit master suites to the seamless indoor-outdoor flow — all designed to
           </div>
         </div>
 
-        <div class="ddo" data-val="Marenasol — 1 Br">
+        <!-- <div class="ddo" data-val="Marenasol — 1 Br">
                           <svg class="ddo-ico" viewBox="0 0 16 16" fill="none"><path d="M2 7L8 2l6 5v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7z" stroke="#8B6F4E" stroke-width="1.2" stroke-linejoin="round" /></svg>
                           <div class="ddo-info">
                             <div class="ddo-lbl">Marenasol</div>
                             <div class="ddo-desc">1 Bedroom · Private Pool</div>
                           </div>
-                        </div>
+                        </div> -->
 
       </div>
     </div>
@@ -1127,14 +1127,48 @@ the sunlit master suites to the seamless indoor-outdoor flow — all designed to
       }
       
       // Booking options (data-booking)
-      if (this.bookingPanel) {
-        const direct = this.bookingPanel.querySelector('[data-booking="direct"]');
-        const airbnb = this.bookingPanel.querySelector('[data-booking="airbnb"]');
-        const wa = this.bookingPanel.querySelector('[data-booking="whatsapp"]');
-        if (direct) direct.addEventListener('click', () => alert("Direct Booking:\n" + this.getMsg()));
-        if (airbnb) airbnb.addEventListener('click', () => window.open("https://www.airbnb.com/rooms/1490374046707839891", "_blank"));
-        if (wa) wa.addEventListener('click', () => window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(this.getMsg()), "_blank"));
+      // if (this.bookingPanel) {
+      //   const direct = this.bookingPanel.querySelector('[data-booking="direct"]');
+      //   const airbnb = this.bookingPanel.querySelector('[data-booking="airbnb"]');
+      //   const wa = this.bookingPanel.querySelector('[data-booking="whatsapp"]');
+      //   if (direct) direct.addEventListener('click', () => alert("Direct Booking:\n" + this.getMsg()));
+      //   if (airbnb) airbnb.addEventListener('click', () => window.open("https://www.airbnb.com/rooms/1490374046707839891", "_blank"));
+      //   if (wa) wa.addEventListener('click', () => window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(this.getMsg()), "_blank"));
+      // }
+
+      // Di dalam initEvents() setelah this.bookingPanel ditemukan
+if (this.bookingPanel) {
+  const direct = this.bookingPanel.querySelector('[data-booking="direct"]');
+  const airbnb = this.bookingPanel.querySelector('[data-booking="airbnb"]');
+  const wa = this.bookingPanel.querySelector('[data-booking="whatsapp"]');
+  
+  if (direct) {
+    direct.addEventListener('click', () => alert("Direct Booking:\n" + this.getMsg()));
+  }
+  
+  if (airbnb) {
+    airbnb.addEventListener('click', () => {
+      const villa = this.villaVal.innerText;
+      let url = '';
+      if (villa === 'La Tropical One') {
+        url = 'https://www.airbnb.com/rooms/1254316850467370453?source_impression_id=p3_1758618535_P3esb6DWMHD2bRde'; // ganti dengan link one
+      } else if (villa === 'La Tropical Two') {
+        url = 'https://www.airbnb.com/rooms/1371408443589444289?search_mode=regular_search&adults=1&check_in=2025-10-02&check_out=2025-10-07&children=0&infants=0&source_impression_id=p3_1758615862_P3E3cnQyh6CoMlLx&previous_page_section_name=1000&federated_search_id=44638810-a48b-4110-8dcb-91399b8277e0'; // ganti dengan link two
+      } else if (villa === 'Marenasol') {
+         url = 'https://www.airbnb.com/rooms/1490374046707839891?search_mode=regular_search&adults=1&check_in=2025-09-03&check_out=2025-09-08&children=0&infants=0&pets=0&source_impression_id=p3_1756868329_P30ZFfpN3GCk0uWS&previous_page_section_name=1000&federated_search_id=189efb75-a3d5-475a-ab08-ca886f17c568'; // ganti link asli Marenasol
+        } else {
+        url = 'https://www.airbnb.com/';
       }
+      window.open(url, '_blank');
+    });
+  }
+  
+  if (wa) {
+    wa.addEventListener('click', () => {
+      window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(this.getMsg()), "_blank");
+    });
+  }
+}
       
       // Close button
       if (this.closeBtn) {
