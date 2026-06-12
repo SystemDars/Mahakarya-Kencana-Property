@@ -308,10 +308,10 @@ img {
 .blur {
   width: 120%;
   margin-left: -10%;
-  height: 260px;
+  height: 300px;
   background-color: #030000;
   position: absolute;
-  bottom: -100px;
+  bottom: -150px;
   -webkit-filter: blur(29px);
   filter: blur(29px);
   z-index: 999;
@@ -326,7 +326,7 @@ img {
   background-color: #030000;
   position: absolute;
   /* bottom: -728px; */
-  top: 179%;
+  top: 200%;
   -webkit-filter: blur(29px);
   filter: blur(29px);
   z-index: 999;
@@ -343,7 +343,7 @@ img {
 }
 
 .section {
-  min-height: 80vh;
+  min-height: 100vh;
   max-width: 950px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -1395,7 +1395,7 @@ img {
     display: flex;
   }
   .nav__item {
-    margin-right: 1.5rem;
+    margin-right: 1.1rem;
     margin-bottom: 0;
     /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.78); */
     padding-top: 5%;
