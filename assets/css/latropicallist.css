@@ -1659,6 +1659,11 @@ body.modal-open {
   cursor: pointer;
 }
 
+.booking-txt {
+  color: #003580;
+  font-weight: 600;
+}
+
 /* ========================================== end construction ========================== */
 
 /*=============== TESTIMONIAL CARD ===============*/
