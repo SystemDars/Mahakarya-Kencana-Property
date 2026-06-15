@@ -2,6 +2,13 @@
  * Padding below the footer and lighter body text
 * -------------------------------------------------- */
 
+@font-face {
+  font-family: "Cormorant Garamond light";
+  src: url("/assets/fonts/static/CormorantGaramond-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   /* padding-bottom: 40px; */
   /* color: #5a5a5a; */
@@ -156,7 +163,7 @@ body {
 
   color: white;
 
-  font-size: 55px;
+  font-size: 70px;
 
   line-height: 0.95;
 
@@ -172,11 +179,12 @@ body {
 
   color: white;
 
-  font-size: 22px;
+  font-size: 24px;
+  /* letter-spacing: 1px; */
 
   line-height: 1.4;
 
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond light", serif;
 }
 
 .hero-scroll {
