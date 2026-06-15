@@ -266,7 +266,7 @@ img {
   font-weight: bold;
   z-index: var(--z-tooltip);
   /* text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.86); */
-  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71);
+  /* text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71); */
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -311,7 +311,7 @@ img {
 .blur {
   width: 120%;
   margin-left: -10%;
-  height: 200px;
+  height: 260px;
   background-color: #030000;
   position: absolute;
   bottom: -150px;
