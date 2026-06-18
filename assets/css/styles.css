@@ -190,6 +190,9 @@ img {
 
 /*===== HOME =====*/
 .home {
+  /* min-height: 100vh;
+  overflow: hidden;
+  position: relative; */
   min-height: 100vh;
   overflow: hidden;
   position: relative;
@@ -303,12 +306,19 @@ img {
 
 /*===== SECTION =====*/
 .l-section {
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color);
   position: relative;
-  z-index: 2;
+  z-index: 2; */
+
+  background-color: var(--dark-color);
+
+  margin-top: -80px;
+
+  position: relative;
+  z-index: 10;
 }
 
-.blur {
+/* .blur {
   width: 120%;
   margin-left: -10%;
   height: 260px;
@@ -318,6 +328,25 @@ img {
   -webkit-filter: blur(29px);
   filter: blur(29px);
   z-index: 999;
+} */
+
+.blur {
+  position: absolute;
+  left: 50%;
+  bottom: -130px;
+
+  transform: translateX(-50%);
+
+  width: 120%;
+  height: 260px;
+
+  background: #030000;
+
+  filter: blur(35px);
+
+  z-index: 20;
+
+  pointer-events: none;
 }
 
 /* .blurbottom { */
