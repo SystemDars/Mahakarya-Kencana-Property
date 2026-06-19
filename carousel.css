@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("/assets/fonts/GlacialIndifference-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   /* padding-bottom: 40px; */
   /* color: #5a5a5a; */
@@ -255,10 +262,11 @@ body {
 
 .story-label {
   display: inline-block;
-  font-size: 19px;
+  font-size: 24px;
   letter-spacing: 2px;
   color: #a48d60;
   margin-bottom: 20px;
+  font-family: "GlacialIndifference", serif;
 }
 
 .story-label::after {
@@ -309,6 +317,226 @@ body {
   object-fit: cover;
   z-index: -1;
 } */
+
+/* ========================== */
+/* ===== EXPERIENCE SECTION ===== */
+
+.experience-section {
+  width: 100%;
+  background: #fff;
+
+  /* padding-top: 40px; */
+  /* padding-bottom: 40px; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.experience-banner {
+  width: 100%;
+  height: 420px;
+
+  background-image: url("/distcarousel/image/experice.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* shadow halus seperti contoh */
+.experience-banner::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .experience-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .experience-banner {
+    width: 95%;
+    height: 220px;
+  }
+}
+
+/* ============================ */
+/* ===== OUR PHILOSOPHY ===== */
+
+.philosophy-section {
+  background: #f8f8f6;
+
+  padding-top: 110px;
+  padding-bottom: 120px;
+
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* .philosophy-label {
+  display: block;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  color: #a79d90;
+
+  margin-bottom: 45px;
+} */
+
+.philosophy-label {
+  font-size: 35px;
+  letter-spacing: 3px;
+  color: #b69b7a;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+  padding-bottom: 20px;
+  font-family: "GlacialIndifference", serif;
+
+  display: inline-block;
+  position: relative;
+}
+
+/* garis bawah */
+.philosophy-label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+
+  width: 80px; /* panjang garis */
+  height: 2px;
+  background: #d8c5aa;
+}
+
+.philosophy-title {
+  max-width: 1100px;
+
+  margin: auto;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.philosophy-row {
+  padding-top: 90px;
+}
+
+.philosophy-item {
+  text-align: center;
+
+  position: relative;
+}
+
+.philosophy-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  top: 2%;
+
+  width: 1px;
+
+  height: 320px;
+
+  background: #efb059;
+}
+
+.philosophy-item img {
+  width: 310px;
+
+  height: auto;
+
+  margin-bottom: 50px;
+}
+
+.philosophy-item h4 {
+  font-size: 22px;
+
+  letter-spacing: 5px;
+
+  font-weight: 600;
+
+  margin-bottom: 22px;
+
+  font-family: "GlacialIndifference", serif;
+}
+
+.philosophy-item span {
+  display: block;
+
+  width: 50px;
+
+  height: 1px;
+
+  /* background: #ddd5cb; #a48d60 */
+  background: #a48d60;
+
+  margin: auto;
+
+  margin-bottom: 26px;
+}
+
+.philosophy-item p {
+  font-size: 26px;
+
+  line-height: 1.7;
+  font-family: "GlacialIndifference", serif;
+
+  color: #333;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 70px 25px;
+  }
+
+  .philosophy-title {
+    font-size: 30px;
+  }
+
+  .philosophy-row {
+    padding-top: 50px;
+  }
+
+  .philosophy-item {
+    margin-bottom: 70px;
+  }
+
+  .philosophy-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .philosophy-item img {
+    width: 160px;
+  }
+
+  .philosophy-item p {
+    font-size: 18px;
+  }
+}
+/* =========================== */
 
 .wsf {
   padding-top: 8%;
