@@ -330,7 +330,7 @@ img {
   z-index: 999;
 } */
 
-.blur {
+/* .blur {
   position: absolute;
   left: 50%;
   bottom: -140px;
@@ -347,6 +347,28 @@ img {
   z-index: 20;
 
   pointer-events: none;
+} */
+
+.blur {
+  position: absolute;
+  overflow: hidden;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%) translateY(55%);
+
+  width: 120%;
+  height: 260px;
+
+  background: #030000;
+
+  filter: blur(20px);
+
+  z-index: 20;
+  pointer-events: none;
+
+  will-change: transform;
 }
 
 /* .blurbottom { */
