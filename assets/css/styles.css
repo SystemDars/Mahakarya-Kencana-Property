@@ -13,6 +13,20 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Cormorant Garamond light";
+  src: url("/assets/fonts/static/CormorantGaramond-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("/assets/fonts/GlacialIndifference-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*===== VARIABLES SCSS =====*/
 /*===== VARIABLES CSS =====*/
 /*=== Colores ===*/
@@ -1537,5 +1551,294 @@ img {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* ======================
+   ABOUT SECTION
+====================== */
+
+.about {
+  padding: 70px 0;
+  background: #f8f7f3;
+}
+
+.about-wrapper {
+  width: min(1280px, 90%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+.about-content {
+  max-width: 440px;
+}
+
+.about-title {
+  font-size: clamp(52px, 5vw, 38px);
+  line-height: 1.1;
+  font-family: "Cormorant Garamond semibold";
+
+  color: #111;
+
+  margin-bottom: 34px;
+
+  font-weight: 800;
+}
+
+.about-content p {
+  font-size: 19px;
+  font-family: "Cormorant Garamond";
+
+  color: #666;
+
+  line-height: 1.9;
+
+  margin-bottom: 26px;
+}
+
+.about-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 56px;
+
+  padding: 0 36px;
+
+  background: #b19460;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #927648;
+}
+
+.about-image {
+  height: 600px;
+
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.about-subtitle {
+  display: inline-block;
+  font-family: "GlacialIndifference", serif;
+  color: #a48d60;
+
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  margin-bottom: 28px;
+
+  position: relative;
+  padding-bottom: 18px;
+}
+
+/* underline */
+.about-subtitle::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 50px; /* panjang garis */
+  height: 2px;
+
+  /* background: #c8c8c8; */
+  background: #a48d60;
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .about {
+    padding: 70px 0;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+}
+
+/* ======================
+   WHAT WE OFFER
+====================== */
+
+.offer {
+  background: #f8f7f3;
+  padding: 110px 0;
+}
+
+.offer-container {
+  width: min(1320px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+.offer-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.offer-title {
+  font-size: clamp(42px, 5vw, 72px);
+  font-family: "Cormorant Garamond semibold";
+
+  color: #74554a;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+}
+
+.offer-line {
+  width: 46px;
+  height: 2px;
+
+  background: #c9c1b8;
+
+  margin: 0 auto 34px;
+}
+
+.offer-desc {
+  max-width: 760px;
+
+  margin: auto;
+
+  font-size: 21px;
+
+  line-height: 1.8;
+
+  color: #333;
+}
+
+/* GRID */
+
+.offer-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 80px 28px;
+}
+
+.offer-card {
+  text-align: center;
+}
+
+/* IMAGE */
+
+.offer-image {
+  overflow: hidden;
+
+  margin-bottom: 26px;
+
+  aspect-ratio: 1.45;
+
+  background: #ddd;
+}
+
+.offer-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.5s;
+}
+
+.offer-card:hover img {
+  transform: scale(1.04);
+}
+
+/* TEXT */
+
+.offer-card h3 {
+  font-size: 34px;
+
+  color: #5e4a3c;
+
+  margin-bottom: 14px;
+
+  font-weight: 500;
+}
+
+.offer-card p {
+  max-width: 430px;
+
+  margin: auto;
+
+  color: #555;
+
+  line-height: 1.8;
+
+  font-size: 17px;
+}
+
+/* MOBILE */
+
+@media (max-width: 992px) {
+  .offer {
+    padding: 80px 0;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .offer-title {
+    font-size: 44px;
+  }
+
+  .offer-desc {
+    font-size: 18px;
+  }
+
+  .offer-card h3 {
+    font-size: 26px;
   }
 }
