@@ -1591,10 +1591,10 @@ img {
 }
 
 .about-content p {
-  font-size: 19px;
+  font-size: 20px;
   font-family: "Cormorant Garamond";
 
-  color: #666;
+  /* color: #666; */
 
   line-height: 1.9;
 
@@ -1618,6 +1618,7 @@ img {
   text-decoration: none;
 
   font-size: 15px;
+  font-weight: bold;
 
   letter-spacing: 2px;
 
@@ -1646,7 +1647,8 @@ img {
 .about-subtitle {
   display: inline-block;
   font-family: "GlacialIndifference", serif;
-  color: #a48d60;
+  /* color: #a48d60; */
+  color: #74554a;
 
   font-size: 20px;
   letter-spacing: 2px;
@@ -1742,11 +1744,12 @@ img {
 
 .offer-desc {
   max-width: 760px;
-  font-family: "Cormorant Garamond";
+  font-family: "Cormorant Garamond semibold";
 
   margin: auto;
 
-  font-size: 21px;
+  font-size: 24px;
+  font-weight: bold;
 
   line-height: 1.8;
 
@@ -1798,8 +1801,10 @@ img {
 
 .offer-card h3 {
   font-size: 34px;
+  font-family: "Cormorant Garamond ";
 
-  color: #5e4a3c;
+  /* color: #5e4a3c; */
+  color: #74554a;
 
   margin-bottom: 14px;
 
@@ -1808,6 +1813,7 @@ img {
 
 .offer-card p {
   max-width: 430px;
+  font-family: "Cormorant Garamond ";
 
   margin: auto;
 
@@ -1841,5 +1847,153 @@ img {
 
   .offer-card h3 {
     font-size: 26px;
+  }
+}
+
+/* ======================
+   PROJECT VILLAS
+====================== */
+
+.project-villas {
+  background: #f8f7f3;
+  padding: 80px 0;
+}
+
+.villa-container {
+  width: min(1320px, 90%);
+  margin: auto;
+}
+
+/* HEADER */
+
+.villa-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.villa-subtitle {
+  font-size: 45px;
+  color: #222;
+  font-family: "Cormorant Garamond semibold";
+
+  margin-bottom: 38px;
+
+  font-weight: 400;
+}
+
+.villa-brand {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.villa-brand img {
+  width: 58px;
+}
+
+.villa-brand span {
+  width: 2px;
+  height: 58px;
+  background: #000;
+  /* background: #444; */
+}
+
+.villa-brand h2 {
+  font-size: 64px;
+  font-family: "Cormorant Garamond semibold";
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: #111;
+}
+
+/* GRID */
+
+.villa-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 34px;
+}
+
+/* CARD */
+
+.villa-card {
+  text-align: center;
+}
+
+.villa-image {
+  overflow: hidden;
+
+  aspect-ratio: 0.72;
+
+  background: #ddd;
+
+  margin-bottom: 26px;
+}
+
+.villa-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.6s;
+}
+
+.villa-card:hover img {
+  transform: scale(1.05);
+}
+
+.villa-card h3 {
+  font-size: 34px;
+  padding-bottom: 150px;
+  font-family: "Cormorant Garamond semibold";
+
+  color: #111;
+
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .villa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .villa-brand {
+    gap: 18px;
+  }
+
+  .villa-brand h2 {
+    font-size: 40px;
+  }
+
+  .villa-brand img {
+    width: 42px;
+  }
+
+  .villa-card h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-villas {
+    padding: 80px 0;
+  }
+
+  .villa-subtitle {
+    font-size: 18px;
   }
 }
