@@ -214,6 +214,60 @@ body {
   }
 } */
 
+/* =========================
+   HERO TEXT FADE ANIMATION
+========================= */
+
+.hero-inner > * {
+  opacity: 0;
+  animation: fadeUp 1.8s ease forwards;
+}
+
+.hero-subtitle {
+  animation-delay: 0.2s;
+}
+
+.hero-title {
+  animation-delay: 0.5s;
+}
+
+.hero-desc {
+  animation-delay: 0.8s;
+}
+
+.hero-scroll {
+  animation-delay: 1.1s;
+
+  /* animasi fade + scroll tetap jalan */
+  animation:
+    fadeUp 1.8s ease forwards 1.1s,
+    scrollDown 2s infinite 2.1s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* tetap pakai animasi panah */
+@keyframes scrollDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
 .carousellogo {
   width: 12rem;
 }
