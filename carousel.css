@@ -62,6 +62,33 @@
   background-color: transparent;
 }
 
+/* Hilangkan border putih/outline saat klik menu */
+.navbar-nav > li > a,
+.nav-link,
+.dropdown-item {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Saat focus / klik */
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:active,
+.nav-link:focus,
+.nav-link:active,
+.nav-link:focus-visible,
+.dropdown-item:focus,
+.dropdown-item:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Hilangkan kotak aktif Bootstrap */
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background: transparent !important;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -279,9 +306,9 @@
 }
 
 .dropdown-menu {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  /* background: #ffffff; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); */
   padding: 10px 0;
 }
 
@@ -290,10 +317,10 @@
   font-weight: 500;
 }
 
-.dropdown-item:hover {
+/* .dropdown-item:hover {
   background: #f5f5f5;
   color: #000 !important;
-}
+} */
 
 /* .video-section {
   position: relative;
