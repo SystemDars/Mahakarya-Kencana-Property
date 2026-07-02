@@ -16,11 +16,6 @@
   font-style: normal;
 }
 
-body {
-  /* padding-bottom: 40px; */
-  /* color: #5a5a5a; */
-}
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -692,8 +687,8 @@ body {
   backface-visibility: hidden;
 }
 
-.flip-box-front {
-}
+/* .flip-box-front {
+} */
 
 .flip-box-back {
   transform: rotateY(180deg);
