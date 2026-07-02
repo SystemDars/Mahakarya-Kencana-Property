@@ -89,6 +89,23 @@
   background: transparent !important;
 }
 
+.navbar-brand,
+.navbar-brand:focus,
+.navbar-brand:active,
+.navbar-brand:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-brand img {
+  display: block;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
