@@ -981,7 +981,7 @@ img {
   background-position: center center;
   background-size: cover;
   background-image: url(/assets/img/construction/backgroundall.png);
-  padding-top: 15%;
+  /* padding-top: 15%; */
 }
 
 .backgroundallconstruction h1 {
@@ -1028,7 +1028,7 @@ img {
 
 .qoutesmid {
   font-family: "Cormorant Garamond semibold", serif !important;
-  margin-top: 14%;
+  /* margin-top: 14%; */
   height: 27rem;
   width: 100rem;
   background-repeat: no-repeat;
@@ -2013,10 +2013,16 @@ img {
 }
 
 .upcoming-section {
-  background: #f5f5f3;
+  /* background: #f5f5f3; */
+
   position: relative;
   overflow: hidden;
   padding: 90px 0 170px;
+
+  background-image: url("/assets/img/construction/backgroundall.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .upcoming-container {
@@ -2035,9 +2041,11 @@ img {
 }
 
 .section-label {
-  font-size: 13px;
+  font-size: 25px;
+  font-family: "Cormorant Garamond light";
   letter-spacing: 2px;
-  color: #777;
+  /* color: #777; */
+  color: #a48d60;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
@@ -2064,16 +2072,18 @@ img {
 }
 
 .upcoming-text p {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.9;
-  color: #555;
+  /* color: #555; */
+  color: #000;
   margin-bottom: 35px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .coming-soon strong {
   display: block;
   margin-bottom: 15px;
-  color: #444;
+  color: #000;
 }
 
 .red-dot {
@@ -2087,11 +2097,13 @@ img {
 
 .main-image {
   position: relative;
+  width: 600px;
+  padding-left: 50px;
 }
 
 .main-image > img {
   width: 100%;
-  height: 560px;
+  height: 660px;
   object-fit: cover;
   display: block;
 }
@@ -2102,39 +2114,59 @@ img {
 .gallery-strip {
   position: absolute;
 
-  bottom: -70px; /* turun sedikit dari gambar besar */
+  width: 980px;
+  height: 180px;
 
-  left: -420px; /* geser ke kiri */
-
-  display: flex;
-
-  gap: 20px;
-
-  z-index: 20;
-}
-
-.gallery-strip img {
-  width: 220px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-strip img:first-child {
-  margin-left: -140px;
-}
-/* gambar terakhir naik dan overlap */
-
-.gallery-strip img:last-child {
-  position: relative;
-
-  margin-left: -50px; /* overlap sedikit */
-  margin-bottom: 90px; /* naik ke atas */
+  left: -520px;
+  bottom: -70px;
 
   z-index: 30;
 }
 
-/* Responsive */
+.gallery-strip img {
+  position: absolute;
+
+  width: 250px;
+  height: 170px;
+
+  object-fit: cover;
+
+  display: block;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* gambar pertama terpotong */
+
+.gallery-strip img:nth-child(1) {
+  left: -120px;
+
+  top: 0;
+}
+
+/* gambar kedua */
+
+.gallery-strip img:nth-child(2) {
+  left: 170px;
+
+  top: 0;
+}
+
+/* gambar ketiga */
+
+.gallery-strip img:nth-child(3) {
+  left: 450px;
+
+  top: 0;
+}
+
+/* gambar keempat overlap gambar besar */
+
+/* .gallery-strip img:nth-child(4) {
+  left: 660px;
+
+  top: 0;
+} */
 
 @media (max-width: 992px) {
   .upcoming-container {
@@ -2168,10 +2200,4 @@ img {
 
     height: 150px;
   }
-}
-
-.upcoming-section {
-  background: #f5f5f2;
-  overflow: hidden; /* agar thumbnail pertama terpotong */
-  position: relative;
 }
