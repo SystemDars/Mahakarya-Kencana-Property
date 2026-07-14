@@ -2042,10 +2042,12 @@ img {
 
 .section-label {
   font-size: 25px;
-  font-family: "Cormorant Garamond light";
+  font-family: "Cormorant Garamond semibold";
   letter-spacing: 2px;
+
   /* color: #777; */
-  color: #a48d60;
+  font-weight: bolder;
+  color: #6a5b3e;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
@@ -2059,7 +2061,7 @@ img {
   bottom: -15px;
   width: 55px;
   height: 2px;
-  background: #b79867;
+  background: #8b734e;
 }
 
 .upcoming-text h2 {
@@ -2117,7 +2119,7 @@ img {
   width: 980px;
   height: 180px;
 
-  left: -520px;
+  left: -580px;
   bottom: -70px;
 
   z-index: 30;
