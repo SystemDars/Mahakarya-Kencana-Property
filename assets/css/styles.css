@@ -745,8 +745,20 @@ img {
   z-index: 3;
 }
 
+.mland2 img {
+  border-radius: 5px;
+}
+
 .cland1 {
   margin-top: 65%;
+}
+
+.mlandimg4 {
+  border-radius: 7px;
+}
+
+.mlandimg3 {
+  border-radius: 7px;
 }
 
 .imglandimg3 {
