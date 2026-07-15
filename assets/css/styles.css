@@ -151,6 +151,8 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .dropdown-menu .dropdown-item {
@@ -179,9 +181,13 @@ img {
 
 .nav__logo {
   color: var(--white-color);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .nav__item {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   margin-bottom: 2rem;
   margin-top: 10px;
 }
@@ -256,6 +262,7 @@ img {
 .home__title,
 .home__scrolldown,
 .home__scrolldownconstruction,
+.home__scrolldownland,
 .home__subtitle {
   position: absolute;
   width: 100%;
@@ -302,6 +309,13 @@ img {
   z-index: 30;
 }
 
+.home__scrolldownland {
+  /* position: absolute; */
+  top: 82%;
+  /* z-index: var(--z-normal); */
+  z-index: 30;
+}
+
 .home__scroll {
   position: absolute;
   bottom: 9.5rem;
@@ -323,6 +337,12 @@ img {
 }
 
 .home__scrolldownconstruction .bx-chevron-down {
+  color: white;
+  font-size: 4em;
+  /* font-size: 30%; */
+}
+
+.home__scrolldownland .bx-chevron-down {
   color: white;
   font-size: 4em;
   /* font-size: 30%; */
@@ -692,12 +712,14 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   color: var(--white-color);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .home__titleland {
   font-family: "Cormorant Garamond semibold", serif !important;
 
-  top: 32%;
+  top: 39%;
   font-size: 4.5rem;
   z-index: var(--z-normal);
   /* text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.71); */
@@ -705,7 +727,7 @@ img {
 
 .home__subtitleland {
   font-family: "Cormorant Garamond", serif !important;
-  top: 43%;
+  top: 53%;
   font-size: 2.6rem;
 
   z-index: var(--z-tooltip);
@@ -967,6 +989,8 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   color: var(--white-color);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .home__titleconstruction {
